@@ -9,6 +9,8 @@ import service from "./http"
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import BScroll from '@better-scroll/core'
+import './global'
+// import './Api'
 
 
 // Vue.use(ElementUI)

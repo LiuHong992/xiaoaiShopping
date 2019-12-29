@@ -61,6 +61,16 @@ const routes = [
                 import ('../views/My/My.vue')
         }]
     },
+    // 城市列表
+    {
+        path: '/city',
+        name: 'city',
+        meta: [{
+            title: '城市列表'
+        }],
+        component: () =>
+            import ('../views/City/City.vue')
+    },
     // 登录
     {
         path: '/login',

@@ -304,3 +304,20 @@
 2019-12-28 13:26:31,029 INFO 7424 [egg-mongoose] instance[0] start successfully
 2019-12-28 13:26:31,032 INFO 7424 [egg-watcher:application] watcher start success
 2019-12-28 13:26:31,052 INFO 7424 [egg:core] dump config after ready, 18ms
+2019-12-29 10:17:57,708 INFO 8244 [egg:logger] init all loggers with options: {"dir":"D:\\desktop\\Shoppingmall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-12-29 10:17:57,861 INFO 8244 [egg-multipart] stream mode enable
+2019-12-29 10:18:00,076 INFO 8244 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2019-12-29 10:18:02,114 INFO 8244 [egg-static] starting static serve /public/ -> D:\desktop\Shoppingmall\server\app\public
+2019-12-29 10:18:02,130 INFO 8244 [egg-security] use methodnoallow middleware
+2019-12-29 10:18:02,134 INFO 8244 [egg-security] use noopen middleware
+2019-12-29 10:18:02,146 INFO 8244 [egg-security] use nosniff middleware
+2019-12-29 10:18:02,150 INFO 8244 [egg-security] use xssProtection middleware
+2019-12-29 10:18:02,153 INFO 8244 [egg-security] use xframe middleware
+2019-12-29 10:18:02,157 INFO 8244 [egg-security] use dta middleware
+2019-12-29 10:18:02,157 INFO 8244 [egg-security] compose 6 middlewares into one security middleware
+2019-12-29 10:18:02,250 INFO 8244 [egg:core] dump config after load, 11ms
+2019-12-29 10:18:02,259 INFO 8244 [egg-mongoose] starting...
+2019-12-29 10:18:02,401 INFO 8244 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2019-12-29 10:18:02,419 INFO 8244 [egg-mongoose] instance[0] start successfully
+2019-12-29 10:18:02,423 INFO 8244 [egg-watcher:application] watcher start success
+2019-12-29 10:18:02,443 INFO 8244 [egg:core] dump config after ready, 15ms

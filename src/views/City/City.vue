@@ -1,8 +1,6 @@
 <template>
  <div>
-   <mytop>
-     <div slot="center">购物车</div>
-   </mytop>
+
  </div>
 </template>
 
