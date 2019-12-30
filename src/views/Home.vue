@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.van-tabbar{
+  height: 7vh;
+}
 </style>

@@ -29,7 +29,12 @@ export default {
 .top {
   display: flex;
   justify-content: space-between;
-  height: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 7.8vh;
   line-height: 40px;
+  // background-color: #ececec;
+  // margin-bottom: 8px;
 }
 </style>

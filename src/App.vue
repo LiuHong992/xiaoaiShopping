@@ -27,6 +27,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
+
 }
 .fade-enter-active, .fade-leave-avtive {
     transition: opacity .5s

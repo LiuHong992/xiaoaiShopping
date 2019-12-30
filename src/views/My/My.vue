@@ -3,17 +3,22 @@
     <mytop>
       <div slot="center">会员中心</div>
     </mytop>
+
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      username:''
+    };
   },
   components: {},
   methods: {},
-  mounted() {},
+  mounted() {
+    // this.username = sessionStorage.getItem()
+  },
   watch: {},
   computed: {}
 };

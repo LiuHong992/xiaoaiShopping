@@ -74,7 +74,7 @@ export default {
   methods: {
     // 跳转回我的
     backTomy() {
-      this.$router.push("/my");
+      this.$router.go(-1);
     },
     // 密码icon改变
     iconchange() {
@@ -112,8 +112,8 @@ export default {
     },
     // 登录
     goTohome() {
-      this.$axios
-        .req("/login", {
+      this.$api
+        .login({
           nickname: this.username,
           password: this.passwords,
           verify: this.yzm
@@ -122,7 +122,7 @@ export default {
           if (res.code === 200) {
             this.$toast(res.msg);
             this.$router.go(-1);
-            sessionStorage.setItem('user',JSON.stringify(res.userInfo))
+            sessionStorage.setItem("user", JSON.stringify(res.userInfo));
             this.changeCaptcha();
           } else if (res.code === -1) {
             this.$toast(res.msg);
@@ -137,8 +137,8 @@ export default {
     },
     // 注册并登录
     registers() {
-      this.$axios
-        .req("/register", {
+      this.$api
+        .register({
           nickname: this.username,
           password: this.passwords,
           verify: this.yzm
@@ -163,7 +163,9 @@ export default {
         });
     }
   },
-  mounted() {},
+  mounted() {
+    this.changeCaptcha();
+  },
   watch: {},
   computed: {}
 };
@@ -181,6 +183,7 @@ export default {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.35);
     .lefticon {
+      font-size: 20px;
       margin-top: 10px;
       margin-left: 8px;
     }

@@ -268,3 +268,13 @@
 2019-12-29 10:17:46,308 INFO 9080 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\app.js"
 2019-12-29 10:17:46,309 INFO 9080 [egg-watcher:agent] watcher start success
 2019-12-29 10:17:46,563 INFO 9080 [egg:core] dump config after ready, 231ms
+2019-12-30 08:12:18,292 INFO 8304 [egg:logger] init all loggers with options: {"dir":"D:\\desktop\\Shoppingmall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-12-30 08:12:18,313 INFO 8304 [egg:core] dump config after load, 11ms
+2019-12-30 08:12:18,626 INFO 8304 [egg-watcher] Start watching: ["D:\\desktop\\Shoppingmall\\server\\app","D:\\desktop\\Shoppingmall\\server\\config","D:\\desktop\\Shoppingmall\\server\\mocks","D:\\desktop\\Shoppingmall\\server\\mocks_proxy","D:\\desktop\\Shoppingmall\\server\\app.js"]
+2019-12-30 08:12:18,626 INFO 8304 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\app"
+2019-12-30 08:12:18,629 INFO 8304 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\config"
+2019-12-30 08:12:18,630 INFO 8304 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\mocks"
+2019-12-30 08:12:18,631 INFO 8304 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\mocks_proxy"
+2019-12-30 08:12:18,632 INFO 8304 [egg-watcher] Start watching: "D:\\desktop\\Shoppingmall\\server\\app.js"
+2019-12-30 08:12:18,633 INFO 8304 [egg-watcher:agent] watcher start success
+2019-12-30 08:12:18,869 INFO 8304 [egg:core] dump config after ready, 205ms
