@@ -5,7 +5,7 @@ import store from './store'
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
 import dayjs from 'dayjs'
-// import service from "./http"
+import service from "./http"
 import Vant from 'vant';
 import 'vant/lib/index.css';
 import BScroll from '@better-scroll/core'
@@ -17,7 +17,8 @@ import Api from './http/Api'
 const bs = new BScroll('.div')
 Vue.use(Vant);
 Vue.prototype.$api = Api
-    // Vue.prototype.$axios = service
+Vue.prototype.$axios = service
+Vue.prototype.$isLoading = false
 Vue.prototype.$dayjs = dayjs
 Vue.config.productionTip = false
 

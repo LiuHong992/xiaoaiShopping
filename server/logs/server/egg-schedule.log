@@ -84,3 +84,27 @@
 2019-12-30 08:12:34,432 INFO 8304 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 73045572ms at 2019-12-31 04:30:00.004
 2019-12-30 08:12:34,433 INFO 8304 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 56845568ms at 2019-12-31 00:00:00.001
 2019-12-30 08:12:34,434 INFO 8304 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 56846567ms at 2019-12-31 00:00:01.001
+2019-12-31 08:19:57,748 INFO 8812 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2019-12-31 08:19:57,748 INFO 8812 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2019-12-31 08:19:57,748 INFO 8812 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2019-12-31 08:20:03,501 INFO 7252 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 72596503ms at 2020-01-01 04:30:00.004
+2019-12-31 08:20:03,501 INFO 7252 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 56396499ms at 2020-01-01 00:00:00.000
+2019-12-31 08:20:03,502 INFO 7252 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 56397499ms at 2020-01-01 00:00:01.001
+2020-01-01 12:21:51,405 INFO 7380 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-01 12:21:51,405 INFO 7380 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-01 12:21:51,405 INFO 7380 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-01 12:21:56,592 INFO 2572 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 58083412ms at 2020-01-02 04:30:00.004
+2020-01-01 12:21:56,593 INFO 2572 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 41883407ms at 2020-01-02 00:00:00.000
+2020-01-01 12:21:56,593 INFO 2572 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 41884407ms at 2020-01-02 00:00:01.000
+2020-01-01 17:15:11,085 INFO 8036 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-01 17:15:11,085 INFO 8036 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-01 17:15:11,085 INFO 8036 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-01 17:15:12,465 INFO 7940 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 40487541ms at 2020-01-02 04:30:00.006
+2020-01-01 17:15:12,465 INFO 7940 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 24287535ms at 2020-01-02 00:00:00.000
+2020-01-01 17:15:12,466 INFO 7940 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 24288535ms at 2020-01-02 00:00:01.001
+2020-01-01 17:25:34,643 INFO 6460 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js
+2020-01-01 17:25:34,643 INFO 6460 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-01-01 17:25:34,643 INFO 6460 [egg-schedule]: register schedule D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-01-01 17:25:41,598 INFO 10096 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-multipart@2.10.1@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 39858406ms at 2020-01-02 04:30:00.004
+2020-01-01 17:25:41,598 INFO 10096 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 23658402ms at 2020-01-02 00:00:00.000
+2020-01-01 17:25:41,599 INFO 10096 [Timer] D:\desktop\Shoppingmall\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 23659402ms at 2020-01-02 00:00:01.001

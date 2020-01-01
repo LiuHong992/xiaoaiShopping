@@ -15,7 +15,7 @@
       <div class="serchtxt" slot="right" @click="onSearch">搜索</div>
     </mytop>
     <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
-      <better>
+      <better class="wrapper">
         <!-- 轮播图 -->
         <Wheel :wheels="list.slides"></Wheel>
         <!-- 分类 -->
@@ -122,6 +122,7 @@ export default {
       document.getElementById("result").innerHTML =
         "失败原因排查信息:" + data.message;
     }
+    // 进入首页获取数据
     this.getRecommend();
   },
   watch: {},
@@ -134,7 +135,7 @@ export default {
   height: 100%;
   background-color: #ececec;
   .hometop {
-    background-color: #ececec;
+    height: 7.8vh;
     .citys {
       height: 100%;
       display: flex;
@@ -164,5 +165,8 @@ export default {
       height: 100%;
     }
   }
+}
+.wrapper {
+  height: 85.2vh;
 }
 </style>

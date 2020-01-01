@@ -1,8 +1,7 @@
 <template>
   <div>
-
     <router-view />
-    <van-tabbar route>
+    <van-tabbar route v-model="active" @change="clearvx">
       <van-tabbar-item replace to="/" icon="wap-home-o">商城</van-tabbar-item>
       <van-tabbar-item replace to="/classfy" icon="wap-nav">分类</van-tabbar-item>
       <van-tabbar-item replace to="/carts" icon="shopping-cart">购物车</van-tabbar-item>
@@ -14,10 +13,16 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      active:'home',
+    };
   },
   components: {},
-  methods: {},
+  methods: {
+    clearvx() {
+      this.$store.state.classId = ''
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}

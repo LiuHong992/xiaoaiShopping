@@ -3,7 +3,7 @@
     <div class="logins">
       <mytop>
         <div class="leftarrow" slot="left" @click="backTomy">
-          <van-icon color="white" size="20px" class="lefticon" name="arrow-left" />
+          <van-icon color="white" class="lefticon" name="arrow-left" />
         </div>
       </mytop>
       <div class="logincontent">

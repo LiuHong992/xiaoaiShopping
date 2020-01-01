@@ -1,10 +1,8 @@
 <template>
-  <div class="core-container">
-    <div class="wrapper" ref="wrapper">
+    <div ref="wrapper">
       <div class="scroll-content">
         <slot class="height"></slot>
       </div>
-    </div>
   </div>
 </template>
 
@@ -35,9 +33,4 @@ export default {
 </script>
 
 <style lang='scss'>
-.core-container {
-  .wrapper {
-    height: 85.2vh;
-  }
-}
 </style>

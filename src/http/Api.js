@@ -71,11 +71,11 @@ export default {
         return service.req(`/goods/one?id=${id}&page=${page}`)
     },
 
-    collection({ goods }) {
+    collection(goods) {
         return service.req('/collection', goods)
     },
 
-    cancelCollection({ id }) {
+    cancelCollection(id) {
         return service.req('/cancelCollection', { id })
     },
 
@@ -97,7 +97,7 @@ export default {
      * comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
      */
     loginOut() {
-        return service.req('/loginOut')
+        return service.post('/loginOut')
     },
 
     user() {

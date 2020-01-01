@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mytop class="cartstitle">
+    <mytop>
       <div slot="center">购物车</div>
     </mytop>
     <div class="cartscontent" v-if="user">
@@ -41,11 +41,6 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.cartstitle {
-  height: 35px;
-  line-height: 35px;
-  border-bottom: 1px solid rgb(233, 232, 232);
-}
 .cartscontents {
   .cartsicon {
     width: 140px;

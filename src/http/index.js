@@ -2,8 +2,13 @@
 import axios from 'axios'
 import qs from 'qs'
 // import { Loading } from 'element-ui'
+import {
+    Loading
+} from 'vant';
+import Vue from 'vue'
 
-// let loading = null
+let loding = null
+    // let loading = null
 
 
 // 判断当前环境是生产环境还是开发环境
@@ -23,6 +28,8 @@ service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencod
 
 // 请求拦截器
 service.interceptors.request.use(config => {
+    Vue.prototype.$isLoading = true
+
     // loading = Loading.service({
     //     text: '正在加载中......'
     // })
@@ -40,9 +47,13 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(response => {
+    if (Vue.prototype.$isLoading) {
+        Vue.prototype.$isLoading = false
+    }
     // if (loading) {
     //     loading.close()
     // }
+
     return response.data
 }, err => {
     // if (err.response.status === 401) {

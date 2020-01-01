@@ -14,7 +14,7 @@
             <div class="spcarts">
               <van-icon color="white" size="20px" name="shopping-cart-o" />
             </div>
-            <div class="contents">查看详情</div>
+            <div class="contents" @click="goTodetails(item.goodsId)">查看详情</div>
           </div>
         </div>
       </div>
@@ -34,7 +34,11 @@ export default {
     }
   },
   components: {},
-  methods: {},
+  methods: {
+    goTodetails(id) {
+      this.$router.push({ name: "goodsdetails", query: { id: id } });
+    }
+  },
   mounted() {},
   watch: {},
   computed: {}
@@ -63,7 +67,7 @@ export default {
       height: 166px !important;
       border-right: 1px solid rgb(233, 232, 232);
       border-top: 1px solid rgb(233, 232, 232);
-      &:last-child{
+      &:last-child {
         border-right: none;
       }
       img {

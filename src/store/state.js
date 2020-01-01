@@ -1,4 +1,5 @@
 export default {
     user: '',
-    phone: 0
+    phone: 0,
+    classId: ''
 }

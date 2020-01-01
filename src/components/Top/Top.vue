@@ -32,8 +32,9 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1;
-  height: 7.8vh;
+  height: 40px;
   line-height: 40px;
+  border-bottom: 1px solid rgb(233, 232, 232)
   // background-color: #ececec;
   // margin-bottom: 8px;
 }
