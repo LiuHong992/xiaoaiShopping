@@ -4,13 +4,22 @@
     }
 }
 
-.van-search {
-    background-color: #ececec !important;
-    width: 230px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-bottom: 0 !important;
-    padding-top: 5px !important;
+// 首页搜索框
+.cserch {
+    .van-search {
+        background-color: #ececec !important;
+        width: 230px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 5px !important;
+    }
+}
+
+.serch {
+    .van-search {
+        padding: 0 !important;
+    }
 }
 
 .van-swipe {
@@ -20,3 +29,7 @@
 // .van-pull-refresh__head{
 //     height: 10px !important;
 // }
+// 预览图片
+.van-image-preview__swipe {
+    height: 100% !important;
+}

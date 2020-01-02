@@ -7,21 +7,21 @@
     </div>
     <div class="foodscontent">
       <div class="fdsleft">
-        <div class="fdsleftop">
+        <div class="fdsleftop" @click="$goto(foodsmodel[0].goodsId)">
           <img :src="foodsmodel[0].image" alt />
         </div>
-        <div class="fdsleftbottom">
+        <div class="fdsleftbottom" @click="$goto(foodsmodel[3].goodsId)" >
           <img :src="foodsmodel[3].image" alt />
         </div>
       </div>
       <div class="fdsright">
-        <div class="rightimg">
+        <div class="rightimg" @click="$goto(foodsmodel[1].goodsId)">
           <img :src="foodsmodel[1].image" alt />
         </div>
-        <div class="rightimg">
+        <div class="rightimg" @click="$goto(foodsmodel[2].goodsId)">
           <img :src="foodsmodel[2].image" alt />
         </div>
-        <div class="rightimg">
+        <div class="rightimg" @click="$goto(foodsmodel[4].goodsId)">
           <img :src="foodsmodel[4].image" alt />
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
       color: white;
       margin: 0 5px 0 140px;
     }
-    span{
+    span {
       font-size: 16px;
     }
   }

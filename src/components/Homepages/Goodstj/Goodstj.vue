@@ -14,7 +14,7 @@
             <div class="spcarts">
               <van-icon color="white" size="20px" name="shopping-cart-o" />
             </div>
-            <div class="contents" @click="goTodetails(item.goodsId)">查看详情</div>
+            <div class="contents" @click="$goto(item.goodsId)">查看详情</div>
           </div>
         </div>
       </div>
@@ -35,9 +35,7 @@ export default {
   },
   components: {},
   methods: {
-    goTodetails(id) {
-      this.$router.push({ name: "goodsdetails", query: { id: id } });
-    }
+
   },
   mounted() {},
   watch: {},

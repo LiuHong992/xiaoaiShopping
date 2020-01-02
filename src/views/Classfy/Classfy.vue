@@ -33,7 +33,7 @@
         <!-- 下方显示内容 -->
         <better class="wrapper">
           <div class="goodsdv">
-            <div class="classgoods" v-for="(item1,index1) in classfylist" :key="index1">
+            <div class="classgoods" @click="$goto(item1.id)" v-for="(item1,index1) in classfylist" :key="index1">
               <div class="gdsimg">
                 <img :src="item1.image" alt />
               </div>
@@ -97,6 +97,7 @@ export default {
         .category(id)
         .then(res => {
           this.classfylist = res.dataList;
+          // console.log(this.classfylist);
         })
         .catch(err => {
           console.log(err);
@@ -113,7 +114,11 @@ export default {
     onChange(ids) {
       this.active = 0;
       this.getCategory(ids);
-    }
+    },
+    // 跳转详情页
+    // goTodetails(id) {
+    //   this.$router.push({ name: "goodsdetails", query: { id: id } });
+    // }
   },
   mounted() {
     this.getClassfy();

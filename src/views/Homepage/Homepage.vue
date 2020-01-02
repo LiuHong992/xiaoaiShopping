@@ -2,14 +2,14 @@
   <div class="homes">
     <!-- 头部导航 -->
     <mytop class="hometop">
-      <div class="citys" slot="left">
-        <span v-if="city">
-          <span class="citysp">{{city}}</span>
+      <div class="citys" slot="left" @click="goTocity($store.state.citys)">
+        <span v-if="$store.state.citys">
+          <span class="citysp">{{$store.state.citys}}</span>
           <van-icon name="arrow-down" />
         </span>
         <span class="citysp" v-else>定位中...</span>
       </div>
-      <div slot="center">
+      <div class="cserch" slot="center">
         <van-search shape="round" placeholder="请输入搜索关键词" v-model="value" />
       </div>
       <div class="serchtxt" slot="right" @click="onSearch">搜索</div>
@@ -54,8 +54,6 @@ export default {
       count: 0,
       isLoading: false,
       value: "",
-      // 接收城市的变量
-      city: "",
       // 接收数据的对象
       list: {},
       psimg: {},
@@ -71,6 +69,15 @@ export default {
     Hotgoods
   },
   methods: {
+    // 跳转城市页面
+    goTocity(val) {
+      if (val) {
+        this.$router.push({ name: "city", params: { city: val } });
+      } else {
+        this.$toast("定位中，请稍后...");
+      }
+    },
+    // 刷新操作
     onRefresh() {
       setTimeout(() => {
         this.isLoading = false;
@@ -96,6 +103,7 @@ export default {
   mounted() {
     // 获取定位
     let _this = this;
+    console.log(_this.$store.state.citys);
     var map = new AMap.Map("container", {
       resizeEnable: true
     });
@@ -114,7 +122,7 @@ export default {
     });
     //解析定位结果
     function onComplete(data) {
-      _this.city = data.addressComponent.city;
+      _this.$store.state.citys = data.addressComponent.city;
     }
     //解析定位错误信息
     function onError(data) {
@@ -126,7 +134,11 @@ export default {
     this.getRecommend();
   },
   watch: {},
-  computed: {}
+  computed: {
+    // city() {
+    //   return this.$store.state.citys;
+    // }
+  }
 };
 </script>
 

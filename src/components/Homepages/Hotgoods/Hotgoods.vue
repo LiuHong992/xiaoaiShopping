@@ -2,7 +2,12 @@
   <div>
     <h3 class="hoth">热销商品</h3>
     <div class="hotgoods">
-      <div class="hotgoodmodel" v-for="(item,index) in hotgoods" :key="index">
+      <div
+        class="hotgoodmodel"
+        @click="$goto(item.goodsId)"
+        v-for="(item,index) in hotgoods"
+        :key="index"
+      >
         <div class="goodsimg">
           <img :src="item.image" alt />
         </div>
@@ -60,7 +65,7 @@ export default {
         height: 100%;
       }
     }
-    .goodsp{
+    .goodsp {
       width: 95%;
       margin: 0 auto;
       text-align: center;
@@ -69,14 +74,14 @@ export default {
       text-overflow: ellipsis;
       color: crimson;
     }
-    .price{
+    .price {
       display: flex;
       width: 39%;
       margin: 10px auto;
-      .mallprice{
+      .mallprice {
         font-size: 18px;
       }
-      .prices{
+      .prices {
         margin-left: 5px;
         font-size: 14px;
         line-height: 20px;

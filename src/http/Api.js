@@ -11,7 +11,10 @@ export default {
         return service.req('/recommend')
     },
 
-    search({ value, page = 1 }) {
+    search({
+        value,
+        page = 1
+    }) {
         return service.req('/search', {
             value,
             page
@@ -37,7 +40,11 @@ export default {
         return service.req('/getCard')
     },
 
-    editCart({ count, id, mallPrice }) {
+    editCart({
+        count,
+        id,
+        mallPrice
+    }) {
         return service.req('/editCart', {
             count,
             id,
@@ -45,7 +52,9 @@ export default {
         })
     },
 
-    deleteShop({ id }) {
+    deleteShop({
+        id
+    }) {
         return service.req('/deleteShop', id)
     },
 
@@ -54,7 +63,9 @@ export default {
      * 购物车支付页面(ShoppingPayMent)所有接口
      * placeOrder 提交订单 参数：address:收货地址,tel:电话，orderId：所有商品的id，totalPrice：总价格,idDirect:用来判断是购物车结算还是直接购买,count:商品数量
      */
-    placeOrder({...args }) {
+    placeOrder({
+        ...args
+    }) {
         return service.req('/order', args)
     },
 
@@ -75,16 +86,24 @@ export default {
         return service.req('/collection', goods)
     },
 
-    cancelCollection(id) {
+    cancelCollection({ id }) {
         return service.req('/cancelCollection', { id })
     },
 
-    isCollection({ id }) {
-        return service.req('/isCollection', { id })
+    isCollection({
+        id
+    }) {
+        return service.req('/isCollection', {
+            id
+        })
     },
 
-    addShop({ id }) {
-        return service.req('/addShop', { id })
+    addShop({
+        id
+    }) {
+        return service.req('/addShop', {
+            id
+        })
     },
     // ===============================================================================================================
 
@@ -104,7 +123,9 @@ export default {
         return service.req('/queryUser')
     },
 
-    saveUser({...args }) {
+    saveUser({
+        ...args
+    }) {
         return service.req('/saveUser', args)
     },
 
@@ -112,7 +133,9 @@ export default {
         return service.req('/myOrder/orderNum')
     },
 
-    comment({...args }) {
+    comment({
+        ...args
+    }) {
         return service.req('/goodsOne/comment', args)
     },
     // ===============================================================================================================
@@ -148,27 +171,38 @@ export default {
         return service.req('/getDefaultAddress')
     },
 
-    setDefaultAddress({ id }) {
-        return service.req('/setDefaultAddress', { id })
+    setDefaultAddress({
+        id
+    }) {
+        return service.req('/setDefaultAddress', {
+            id
+        })
     },
 
-    postAddress({...args }) {
+    postAddress({
+        ...args
+    }) {
         return service.req('/address', args)
     },
 
-    deleteAddress({ id }) {
+    deleteAddress({
+        id
+    }) {
         return service.req('/deleteAddress', {
             id
         })
     },
 
-    getCollection(page = 1) {
-        return service.req('/collection/list', {
-            params: { page }
-        })
+    getCollection() {
+        return service.req(`/collection/list?page=1`)
     },
 
-    register({ nickname, password, verify, sms }) {
+    register({
+        nickname,
+        password,
+        verify,
+        sms
+    }) {
         return service.req('/register', {
             nickname,
             password,
@@ -177,7 +211,11 @@ export default {
         })
     },
 
-    login({ nickname, password, verify }) {
+    login({
+        nickname,
+        password,
+        verify
+    }) {
         return service.req('/login', {
             nickname,
             password,
@@ -197,17 +235,23 @@ export default {
 
     alreadyEvaluated(page = 1) {
         return service.req('/alreadyEvaluated', {
-            params: { page }
+            params: {
+                page
+            }
         })
     },
 
     tobeEvaluated(page = 1) {
         return service.req('/tobeEvaluated', {
-            params: { page }
+            params: {
+                page
+            }
         })
     },
 
-    evaluateOne({ _id }) {
+    evaluateOne({
+        _id
+    }) {
         return service.req('/evaluateOne', {
             _id
         })

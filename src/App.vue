@@ -10,7 +10,7 @@
           <van-loading class="vloding" color="#1989fa" />
         </div>
       </div>
-    </van-overlay> -->
+    </van-overlay>-->
     <!-- </Backtop> -->
   </div>
 </template>
@@ -31,9 +31,15 @@ export default {
   align-items: center;
   flex-wrap: wrap;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
 body {
   margin: 0;
   padding: 0;
+
 }
 .fade-enter-active,
 .fade-leave-avtive {

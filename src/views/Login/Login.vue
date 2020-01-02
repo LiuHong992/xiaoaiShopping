@@ -2,7 +2,7 @@
   <div>
     <div class="logins">
       <mytop>
-        <div class="leftarrow" slot="left" @click="backTomy">
+        <div class="leftarrow" slot="left" @click="$goto()">
           <van-icon color="white" class="lefticon" name="arrow-left" />
         </div>
       </mytop>
@@ -72,10 +72,6 @@ export default {
   },
   components: {},
   methods: {
-    // 跳转回我的
-    backTomy() {
-      this.$router.go(-1);
-    },
     // 密码icon改变
     iconchange() {
       if (this.lefticon === "closed-eye") {
@@ -147,6 +143,7 @@ export default {
           if (res.code === 200) {
             this.$toast(res.msg);
             this.$router.go(-1);
+            sessionStorage.setItem("user", JSON.stringify(res.userInfo));
             this.changeCaptcha();
           } else if (res.code === -1) {
             this.$toast(res.msg);

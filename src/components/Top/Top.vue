@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <div>
-      <slot name="left"></slot>
+      <slot class="leftarrow" name="left"></slot>
     </div>
     <div>
       <slot name="center"></slot>
@@ -34,8 +34,22 @@ export default {
   z-index: 1;
   height: 40px;
   line-height: 40px;
-  border-bottom: 1px solid rgb(233, 232, 232)
-  // background-color: #ececec;
-  // margin-bottom: 8px;
+  border-bottom: 1px solid rgb(233, 232, 232);
+  // // 返回按钮
+  // .leftarrow {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 100;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-radius: 50%;
+  //   background-color: rgba(0, 0, 0, 0.35);
+  //   .lefticon {
+  //     font-size: 20px;
+  //     margin-top: 10px;
+  //     margin-left: 8px;
+  //   }
+  // }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <div ref="wrapper">
-      <div class="scroll-content">
-        <slot class="height"></slot>
-      </div>
+  <div ref="wrapper">
+    <div class="scroll-content">
+      <slot class="height"></slot>
+    </div>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    this.init();
+    setTimeout(this.init(), 2000);
   },
   beforeDestroy() {},
   watch: {},
