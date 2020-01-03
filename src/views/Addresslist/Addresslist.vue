@@ -1,34 +1,25 @@
 <template>
- <div>
-
- </div>
+  <div>
+   
+  </div>
 </template>
 
 <script>
- export default {
-   data () {
-     return {
+export default {
+  data() {
+    return {
 
-     }
-   },
-   components: {
+    };
+  },
+  components: {},
+  methods: {},
+  mounted() {
 
-   },
-   methods: {
-
-   },
-   mounted() {
-
-   },
-   watch: {
-
-   },
-   computed: {
-
-   }
- }
+  },
+  watch: {},
+  computed: {}
+};
 </script>
 
 <style scoped lang='scss'>
-
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="model" v-for="(item,index) in list" :key="index">
-      <div class="modelimg">
+      <div class="modelimg" @click="$goto(item.id||item.cid)">
         <img :src="item.image_path" alt />
       </div>
-      <div class="maincont">
+      <div class="maincont" @click="$goto(item.id||item.cid)">
         <p class="pnames">{{item.name}}</p>
         <p class="pprices">
           <span class="preprice">￥{{item.present_price}}</span>
@@ -33,18 +33,22 @@ export default {
     name: {
       type: String,
       default: ""
+    },
+    ids: {
+      // type:
     }
   },
   components: {},
   methods: {
     // 删除操作
     del(item) {
-      // 收藏页操作
+      // 收藏页操作 历史记录页操作
       if (this.name === "收藏") {
-        this.$dialog.confirm({
-          title: "取消收藏",
-          message: "您确认要取消收藏该商品吗？"
-        })
+        this.$dialog
+          .confirm({
+            title: "取消收藏",
+            message: "您确认要取消收藏该商品吗？"
+          })
           .then(() => {
             this.$api
               .cancelCollection({ id: item.cid })
@@ -61,8 +65,21 @@ export default {
                 console.log(err);
               });
           })
-          .catch(() => {
-          });
+          .catch(() => {});
+      } else {
+        this.$dialog
+          .confirm({
+            title: "消除历史记录",
+            message: "您确认要删除该条历史记录吗？"
+          })
+          .then(() => {
+            this.flag = true;
+            this.$store.state.historys = this.list.filter(desc => {
+              return desc !== item;
+            });
+            this.$emit("del", this.flag);
+          })
+          .catch(() => {});
       }
     }
   },
@@ -98,7 +115,7 @@ export default {
       margin-bottom: 20px;
     }
     .pprices {
-      font-size: 13px;
+      font-size: 12px;
       .preprice {
         color: red;
         font-weight: 700;

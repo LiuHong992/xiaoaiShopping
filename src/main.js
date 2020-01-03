@@ -11,6 +11,7 @@ import 'vant/lib/index.css';
 import BScroll from '@better-scroll/core'
 import './global'
 import Api from './http/Api'
+import utils from './assets/js/util'
 
 
 // Vue.use(ElementUI)
@@ -21,7 +22,7 @@ Vue.prototype.$axios = service
 Vue.prototype.$isLoading = false
 Vue.prototype.$dayjs = dayjs
 Vue.config.productionTip = false
-
+Vue.prototype.$utils = utils
 
 new Vue({
     router,

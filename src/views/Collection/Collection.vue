@@ -19,7 +19,7 @@ export default {
     return {
       //  接收收藏夹数据的数组
       collectlist: [],
-      name:'收藏'
+      name: "收藏"
     };
   },
   components: {
@@ -30,6 +30,7 @@ export default {
     getCollectlist() {
       this.$api.getCollection().then(res => {
         this.collectlist = res.data.list;
+        // console.log(this.collectlist);
       });
     },
     del(data) {
@@ -40,6 +41,7 @@ export default {
   },
   mounted() {
     this.getCollectlist();
+
   },
   watch: {},
   computed: {}

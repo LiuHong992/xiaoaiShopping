@@ -87,7 +87,7 @@ export default {
       // 收藏按钮状态
       flag: false,
       // 接收轮播图图片数据的数组
-      images:[]
+      images: []
     };
   },
   components: {
@@ -102,7 +102,7 @@ export default {
           if (res.code === 200) {
             this.goods = res.goods;
             this.details = this.goods.goodsOne;
-            this.images.push(this.details.image)
+            this.images.push(this.details.image);
             this.judge();
           } else {
             this.$toast("请求数据失败");
@@ -185,7 +185,14 @@ export default {
     this.getDetails();
   },
   watch: {},
-  computed: {}
+  computed: {},
+  beforeRouteLeave(to, from, next) {
+    if (!this.$store.state.historys.some(item => item.id === this.details.id)) {
+      this.$store.state.historys.push(this.details);
+      sessionStorage.setItem("historyy", JSON.stringify(this.details));
+    }
+    next();
+  }
 };
 </script>
 

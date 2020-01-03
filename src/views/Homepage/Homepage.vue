@@ -10,10 +10,49 @@
         <span class="citysp" v-else>定位中...</span>
       </div>
       <div class="cserch" slot="center">
-        <van-search shape="round" placeholder="请输入搜索关键词" v-model="value" />
+        <van-search @focus="changeShow" shape="round" placeholder="请输入搜索关键词" v-model="value" />
       </div>
-      <div class="serchtxt" slot="right" @click="onSearch">搜索</div>
+      <div class="serchtxt" slot="right">
+        <span v-if="show" @click="changeShows">取消</span>
+      </div>
     </mytop>
+    <div class="pop">
+      <van-popup
+        :overlay="false"
+        v-model="show"
+        position="bottom"
+        :style="{ height: '92.5%' }"
+        v-if="serchlist"
+      >
+        <div class="clearhis" v-if="this.$store.state.serchistorys.length>0" @click="delhistory">
+          <span>清除历史记录</span>
+        </div>
+        <div>
+          <div class="serchistory" v-if="this.$store.state.serchistorys.length>0">
+            <div
+              class="shmodel"
+              v-for="item in this.$store.state.serchistorys"
+              :key="item.id"
+              @click="changeValue(item)"
+            >
+              <span>{{item}}</span>
+            </div>
+          </div>
+          <div class="serchistory" v-else-if="this.value.trim() ==='' &&this.serchlist.length===0">
+            <p>暂无搜索记录</p>
+          </div>
+        </div>
+        <div class="serchmodel" v-for="item in serchlist" :key="item.id" @click="$goto(item.id)">
+          <div class="sgimg">
+            <img :src="item.image" alt />
+          </div>
+          <div class="rtcont">
+            <p v-html="item.name"></p>
+            <p class="pprice">￥{{item.present_price}}</p>
+          </div>
+        </div>
+      </van-popup>
+    </div>
     <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh">
       <better class="wrapper">
         <!-- 轮播图 -->
@@ -58,7 +97,11 @@ export default {
       list: {},
       psimg: {},
       // 接收食品名字的对象
-      floornames: {}
+      floornames: {},
+      show: false,
+      // 搜索框接收的数组
+      serchlist: [],
+      page:''
     };
   },
   components: {
@@ -97,13 +140,49 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    // 显示搜索弹出层（显示）
+    changeShow() {
+      this.show = true;
+    },
+    // 显示搜索弹出层（消失）
+    changeShows() {
+      this.value = "";
+      this.serchlist = [];
+      this.show = false;
+    },
+    // 清除历史记录
+    delhistory() {
+      this.$dialog
+        .confirm({
+          title: "删除历史搜索记录",
+          message: "您确认删除所有搜索记录吗？"
+        })
+        .then(() => {
+          this.$store.state.serchistorys = [];
+        })
+        .catch(() => {});
+    },
+    // 将历史记录中的值加入到搜索框值
+    changeValue(name) {
+      this.value = name;
+    },
+    // 搜索框获取展示数据
+    getShow() {
+    this.$watch('value',throttle(() => {
+      this.dataArr =[]
+      if(this.value){
+        this.page = 1
+        this.search(this.value,false)
+      }
+    },800))
     }
   },
 
   mounted() {
     // 获取定位
     let _this = this;
-    console.log(_this.$store.state.citys);
+    // console.log(_this.$store.state.citys);
     var map = new AMap.Map("container", {
       resizeEnable: true
     });
@@ -132,12 +211,41 @@ export default {
     }
     // 进入首页获取数据
     this.getRecommend();
+    // console.log(this.$store.state.historys);
   },
-  watch: {},
-  computed: {
-    // city() {
-    //   return this.$store.state.citys;
+  watch: {
+    // value(data) {
+    //   this.$utils.throttle(() => {
+    //     console.log(111);
+    //     if (data.trim() !== "") {
+    //       this.$api
+    //         .search({ value: this.value.trim() })
+    //         .then(res => {
+    //           this.serchlist = res.data.list;
+    //           this.serchlist.map(item => {
+    //             item.name = this.$utils.keyWord(item.name, this.value.trim());
+    //           });
+    //         })
+    //         .catch(err => {
+    //           console.log(err);
+    //         });
+    //     } else if (data.trim() === "") {
+    //       data.trim() === "";
+    //       this.serchlist = [];
+    //     }
+    //   }, 800);
     // }
+  },
+  computed: {},
+  beforeRouteLeave(to, from, next) {
+    if (
+      !this.$store.state.serchistorys.some(item => item === this.value) &&
+      this.value !== ""
+    ) {
+      this.$store.state.serchistorys.push(this.value);
+      // sessionStorage.setItem("historyy", JSON.stringify(this.value));
+    }
+    next();
   }
 };
 </script>
@@ -161,12 +269,80 @@ export default {
         line-height: 40px;
       }
     }
+    .cserch {
+      width: 223px;
+      height: 100%;
+    }
   }
 
   .serchtxt {
+    width: 32px;
     height: 100%;
     font-size: 14px;
     margin-right: 10px;
+  }
+  // 搜索框显示层
+  .pop {
+    // position: relative;
+    .serchmodel {
+      display: flex;
+      width: 100%;
+      height: 80px;
+      .sgimg {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .rtcont {
+        height: 100%;
+        padding: 10px 0;
+        p {
+          padding: 10px 0;
+        }
+        .pprice {
+          color: crimson;
+          font-size: 14px;
+        }
+      }
+    }
+    // 清除历史记录按键
+    .clearhis {
+      width: 80px;
+      height: 25px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-left: 260px;
+      background-color: #ececec;
+      text-align: center;
+      span {
+        font-size: 12px;
+        line-height: 25px;
+      }
+    }
+    // 搜索历史记录显示
+    .serchistory {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      p {
+        width: 100%;
+      }
+      .shmodel {
+        width: 80px;
+        height: 20px;
+        padding: 5px 10px;
+        background-color: #ececec;
+        margin-left: 10px;
+        margin-top: 5px;
+        line-height: 20px;
+      }
+    }
   }
   .delivery {
     width: 100vw;

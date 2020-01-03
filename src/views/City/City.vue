@@ -11,54 +11,92 @@
     <div class="serch">
       <van-search placeholder="请输入搜索关键词" v-model="value" />
     </div>
-    <!-- 当前城市 -->
-    <div class="nowcity">
-      <p class="pcity">当前城市</p>
-      <div class="now">
-        <div class="nctiy">{{this.$store.state.citys}}</div>
+    <div v-if="value ===''">
+      <!-- 当前城市 -->
+      <div class="nowcity">
+        <p class="pcity">当前城市</p>
+        <div class="now">
+          <div class="nctiy">{{this.$store.state.citys}}</div>
+        </div>
+      </div>
+      <!-- 热门城市 -->
+      <div class="hotcity">
+        <p class="pcity">热门城市</p>
+        <div class="hot">
+          <div
+            @click="select(item.name)"
+            class="hotcitymodel"
+            v-for="item in hotcity"
+            :key="item.id"
+          >{{item.name}}</div>
+        </div>
+      </div>
+      <van-index-bar :sticky-offset-top="110">
+        <div v-for="item in Object.keys(city)" :key="item.id">
+          <van-index-anchor :index="item" />
+          <van-cell
+            @click="select(item0.name)"
+            :title="item0.name"
+            v-for="(item0,index) in city[item]"
+            :key="index"
+          />
+        </div>
+      </van-index-bar>
+    </div>
+    <!-- 搜索后展示内容 -->
+    <div class="serchs" v-else>
+      <div class="serchcity" v-for="item in cityes" :key="item.id">
+        {{item.name}}
       </div>
     </div>
-    <!-- 热门城市 -->
-    <div class="hotcity">
-      <p class="pcity">热门城市</p>
-      <div class="hot">
-        <div class="hotcitymodel" v-for="item in city.data.hotCities" :key="item.id">{{item.name}}</div>
-      </div>
-    </div>
-    <van-index-bar>
-      <van-index-anchor index="A" />
-      <van-cell title="文本" />
-      <van-cell title="文本" />
-      <van-cell title="文本" />
-
-      <van-index-anchor index="B" />
-      <van-cell title="文本" />
-      <van-cell title="文本" />
-      <van-cell title="文本" />
-    </van-index-bar>
   </div>
 </template>
 
 <script>
-import cities from "../../assets/js/city";
+import cityss from "../../assets/js/city";
 export default {
   data() {
     return {
-      city: cities,
-      value: ""
+      cits: cityss,
+      hotcity: [],
+      city: {},
+      value: "",
+      cityname: [],
     };
   },
   components: {},
-  methods: {},
-  mounted() {},
-  watch: {},
-  computed: {}
+  methods: {
+    getCity() {
+      this.city = this.cits.data.cities;
+      this.hotcity = this.cits.data.hotCities;
+      Object.keys(this.city).map(item => {
+        this.cityname.push(...this.city[item]);
+      });
+    },
+    // 搜索
+    select(name) {
+      this.$store.state.citys = name;
+      this.$router.go(-1);
+    }
+  },
+  mounted() {
+    this.getCity();
+    // console.log(this.$store.state.citys);
+  },
+  watch: {
+  },
+  computed: {
+    cityes() {
+      return this.cityname.filter(item => {
+        return JSON.stringify(item).includes(this.value)
+      })
+    }
+  }
 };
 </script>
 
 <style scoped lang='scss'>
 .bg {
-  height: 100vh;
   background-color: #ececec !important;
   .lftarrow {
     .backi {
@@ -73,8 +111,8 @@ export default {
   // 搜索框
   .serch {
     position: sticky;
-    top: 45px;
-    // z-index: 99;
+    top: 40px;
+    z-index: 99;
     height: 40px;
     width: 94%;
     padding: 10px;
@@ -122,6 +160,17 @@ export default {
         margin: 10px 0;
         border: 1px solid darkgray;
       }
+    }
+  }
+  .serchs{
+    height: 100vh;
+    background-color: #ececec;
+    .serchcity{
+      width: 100%;
+      height: 20px;
+      padding: 10px;
+      line-height: 20px;
+      background-color: white;
     }
   }
 }
