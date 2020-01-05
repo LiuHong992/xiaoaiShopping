@@ -1,5 +1,14 @@
 <template>
   <div>
+    <!-- 修改个人信息弹出层 -->
+    <van-popup
+      v-model="show"
+      position="right"
+      :style="{ height: '100%' ,width:'100%' }"
+      :overlay="false"
+    >
+      <eject @changes="changes" :userInfo="userInfo"></eject>
+    </van-popup>
     <!-- 头部组件 -->
     <mytop>
       <div slot="center">会员中心</div>
@@ -54,33 +63,57 @@
 <script>
 import myinfo from "../../components/My/Mytopp";
 import orderlist from "../../components/My/Orderlist";
+import eject from "../../components/My/Eject";
 export default {
   data() {
     return {
-      users: ""
+      users: "",
+      show: false,
+      // 接收用户信息的对象
+      userInfo: {}
     };
   },
   components: {
     myinfo,
-    orderlist
+    orderlist,
+    eject
   },
   methods: {
+    // 导航栏跳转
     goTorouter(path) {
       if (sessionStorage.getItem("user")) {
         this.users = JSON.parse(sessionStorage.getItem("user"));
       }
       if (this.users) {
         this.$router.push(path);
-      }else{
-        this.$toast('请先登录哦!')
+      } else {
+        this.$toast("请先登录哦!");
       }
     },
     // 历史记录
     goTohistory() {
-      this.$router.push('/history')
+      this.$router.push("/history");
+    },
+    changes(data) {
+      this.show = data;
+    },
+    // 获取用户信息
+    getUser() {
+      this.$api
+        .user()
+        .then(res => {
+          if (res.code === 200) {
+            this.userInfo = res.userInfo;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
-  mounted() {},
+  mounted() {
+    this.getUser();
+  },
   watch: {},
   computed: {}
 };

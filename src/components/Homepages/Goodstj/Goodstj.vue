@@ -12,7 +12,7 @@
           </div>
           <div class="main">
             <div class="spcarts">
-              <van-icon color="white" size="20px" name="shopping-cart-o" />
+              <van-icon color="white" size="20px" name="shopping-cart-o" @click="addTocarts(item)" />
             </div>
             <div class="contents" @click="$goto(item.goodsId)">查看详情</div>
           </div>
@@ -35,7 +35,37 @@ export default {
   },
   components: {},
   methods: {
-
+    // 每次进详情页就对购物车数据进行请求，通过购物车数据数组长度来对购物车按钮
+    // 徽标数字进行动态变化
+    // getCarts() {
+    //   this.$api
+    //     .getCard()
+    //     .then(res => {
+    //       this.count = res.shopList.length;
+    //       if (this.count === 0) {
+    //         this.count = "";
+    //       }
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+    // },
+    // 加入购物车
+    addTocarts(item) {
+      if (sessionStorage.getItem("user")) {
+        this.$api
+          .addShop({ id: item.goodsId })
+          .then(res => {
+            this.$toast(res.msg);
+            this.$store.state.cartsum++
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      } else {
+        this.$toast("请先登录哦~");
+      }
+    }
   },
   mounted() {},
   watch: {},

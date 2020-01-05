@@ -37,7 +37,7 @@ export default {
      * deleteShop   购物车商品删除      参数 id：需要删除的商品cid
      */
     getCard() {
-        return service.req('/getCard')
+        return service.post('/getCard')
     },
 
     editCart({
@@ -52,10 +52,12 @@ export default {
         })
     },
 
-    deleteShop({
+    deleteShop(
         id
-    }) {
-        return service.req('/deleteShop', id)
+    ) {
+        return service.req('/deleteShop', {
+            _id: id
+        })
     },
 
     // ===============================================================================================================
@@ -86,8 +88,12 @@ export default {
         return service.req('/collection', goods)
     },
 
-    cancelCollection({ id }) {
-        return service.req('/cancelCollection', { id })
+    cancelCollection({
+        id
+    }) {
+        return service.req('/cancelCollection', {
+            id
+        })
     },
 
     isCollection({
@@ -120,12 +126,12 @@ export default {
     },
 
     user() {
-        return service.req('/queryUser')
+        return service.post('/queryUser')
     },
 
-    saveUser({
+    saveUser(
         ...args
-    }) {
+    ) {
         return service.req('/saveUser', args)
     },
 

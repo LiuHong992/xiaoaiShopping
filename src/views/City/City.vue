@@ -61,6 +61,7 @@ export default {
       hotcity: [],
       city: {},
       value: "",
+      // 接收带有A、B、C一类数据的数组
       cityname: [],
     };
   },

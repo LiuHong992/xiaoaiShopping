@@ -1,7 +1,7 @@
 <template>
   <div class="infotop">
     <div class="settings" v-if="users">
-      <van-icon size="24px" color="white" name="setting" />
+      <van-icon size="24px" color="white" name="setting" @click="changeShow" />
     </div>
     <div class="settings" v-else></div>
     <div class="portrait">
@@ -44,6 +44,9 @@ export default {
     // 登录/注册
     goTologin() {
       this.$router.push("/login");
+    },
+    changeShow() {
+      this.$parent.show = true;
     }
   },
   mounted() {

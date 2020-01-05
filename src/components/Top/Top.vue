@@ -31,7 +31,7 @@ export default {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid rgb(233, 232, 232);

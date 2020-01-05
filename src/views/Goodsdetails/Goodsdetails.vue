@@ -64,14 +64,15 @@
     <!-- 底部商品导航 -->
     <van-goods-action class="vgoodsaction">
       <van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
-      <van-goods-action-icon icon="cart-o" text="购物车" @click="onClickIcon" />
-      <van-goods-action-button type="warning" text="加入购物车" @click="onClickButton" />
+      <van-goods-action-icon
+        icon="cart-o"
+        text="购物车"
+        @click="goTocarts"
+        :info="this.$store.state.cartsum"
+      />
+      <van-goods-action-button type="warning" text="加入购物车" @click="addTocarts" />
       <van-goods-action-button type="danger" text="立即购买" @click="onClickButton" />
     </van-goods-action>
-
-    <!-- <img :src="details.image" alt="">
-    <img :src="details.image_path" alt="">
-    <div v-html="details.detail"></div>-->
   </div>
 </template>
 
@@ -87,7 +88,7 @@ export default {
       // 收藏按钮状态
       flag: false,
       // 接收轮播图图片数据的数组
-      images: []
+      images: [],
     };
   },
   components: {
@@ -174,18 +175,55 @@ export default {
         });
       }
     },
-    onClickIcon() {
-      this.$toast("点击图标");
+    // 每次进详情页就对购物车数据进行请求，通过购物车数据数组长度来对购物车按钮
+    // 徽标数字进行动态变化
+    // getCarts() {
+    //   this.$api
+    //     .getCard()
+    //     .then(res => {
+    //       this.lengths = res.shopList.length;
+    //       if (this.lengths === 0) {
+    //         this.lengths = "";
+    //       }
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+    // },
+    // 跳转到购物车页面
+    goTocarts() {
+      this.$router.push("/carts");
+    },
+    // 加入购物车
+    addTocarts() {
+      if (sessionStorage.getItem("user")) {
+        this.$api
+          .addShop({ id: this.details.id })
+          .then(res => {
+            this.$toast(res.msg);
+            this.$store.state.cartsum++
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      } else {
+        this.$toast("请先登录哦~");
+      }
     },
     onClickButton() {
       this.$toast("点击按钮");
+    },
+    onClickIcon() {
+      this.$toast("该功能还在开发中哦~");
     }
   },
   mounted() {
     this.getDetails();
+    // this.getCarts();
   },
   watch: {},
   computed: {},
+  // 跳转详情页路由前将详情页的信息存入Vuex中和sessionStorage中
   beforeRouteLeave(to, from, next) {
     if (!this.$store.state.historys.some(item => item.id === this.details.id)) {
       this.$store.state.historys.push(this.details);
@@ -283,10 +321,6 @@ export default {
   }
   .vgoodstabs {
     margin-bottom: 57px;
-    // .details {
-    // }
-    // .comment {
-    // }
     .ta {
       text-align: center;
     }

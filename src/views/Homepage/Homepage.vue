@@ -101,8 +101,10 @@ export default {
       show: false,
       // 搜索框接收的数组
       serchlist: [],
-      page:''
+      page: ""
     };
+  },
+  props: {
   },
   components: {
     Wheel,
@@ -169,13 +171,16 @@ export default {
     },
     // 搜索框获取展示数据
     getShow() {
-    this.$watch('value',throttle(() => {
-      this.dataArr =[]
-      if(this.value){
-        this.page = 1
-        this.search(this.value,false)
-      }
-    },800))
+      this.$watch(
+        "value",
+        throttle(() => {
+          this.dataArr = [];
+          if (this.value) {
+            this.page = 1;
+            this.search(this.value, false);
+          }
+        }, 800)
+      );
     }
   },
 
