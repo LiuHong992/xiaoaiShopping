@@ -3,10 +3,10 @@
     <!-- 头部导航 -->
     <mytop class="hometop">
       <div class="citys" slot="left" @click="goTocity($store.state.citys)">
-        <span v-if="$store.state.citys">
+        <div v-if="$store.state.citys">
           <span class="citysp">{{$store.state.citys}}</span>
           <van-icon name="arrow-down" />
-        </span>
+        </div>
         <span class="citysp" v-else>定位中...</span>
       </div>
       <div class="cserch" slot="center">
@@ -104,8 +104,7 @@ export default {
       page: ""
     };
   },
-  props: {
-  },
+  props: {},
   components: {
     Wheel,
     Recommend,
@@ -222,13 +221,13 @@ export default {
     // value(data) {
     //   this.$utils.throttle(() => {
     //     console.log(111);
-    //     if (data.trim() !== "") {
+    //     if (data !== "") {
     //       this.$api
-    //         .search({ value: this.value.trim() })
+    //         .search({ value: this.value})
     //         .then(res => {
     //           this.serchlist = res.data.list;
     //           this.serchlist.map(item => {
-    //             item.name = this.$utils.keyWord(item.name, this.value.trim());
+    //             item.name = this.$utils.keyWord(item.name, this.value);
     //           });
     //         })
     //         .catch(err => {
@@ -265,13 +264,20 @@ export default {
       height: 100%;
       display: flex;
       font-size: 14px;
+      div {
+        display: flex;
+        i{
+          margin-left: 2px;
+          margin-top: 14px;
+        }
+      }
       .citysp {
         height: 100%;
         display: inline-block;
         text-indent: 20px;
       }
-      i {
-        line-height: 40px;
+      i{
+        margin-top: 10px !important;
       }
     }
     .cserch {

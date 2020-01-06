@@ -19,7 +19,7 @@
           </p>
           <div class="opright">
             <div class="dele" @click="deletecarts">删除</div>
-            <div class="gotopay">去结算</div>
+            <div class="gotopay" @click="goTopay">去结算</div>
           </div>
         </div>
       </div>
@@ -43,6 +43,7 @@
         </div>
       </div>
     </div>
+    <!-- 已登录但购物车里没有数据 -->
     <div class="cartscontents" v-else-if="user">
       <div class="cartsicon">
         <img src="../../assets/images/shop.png" alt />
@@ -82,7 +83,7 @@ export default {
     },
     // 购物车里没数据跳转去首页
     goTohome() {
-      this.$router.push('/')
+      this.$router.push("/");
     },
     // 购物车获取购物车详情数据
     getCarts() {
@@ -159,6 +160,17 @@ export default {
           .catch(() => {});
       } else {
         this.$toast("您未选中任何商品哟~");
+      }
+    },
+    // 结算按钮
+    goTopay() {
+      this.truelist = this.cartslist.filter(item => {
+        return item.check === true;
+      });
+      if (this.truelist.length > 0) {
+        this.$router.push({name:"payment",params:{paylist:this.truelist}});
+      }else {
+        this.$toast('请您选择您要购买的商品哟~')
       }
     }
   },

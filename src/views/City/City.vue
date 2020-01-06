@@ -145,6 +145,7 @@ export default {
   }
   // 热门城市
   .hotcity {
+    font-size: 14px;
     .hot {
       display: flex;
       justify-content: space-around;

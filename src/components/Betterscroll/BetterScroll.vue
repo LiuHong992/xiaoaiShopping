@@ -24,7 +24,9 @@ export default {
     }
   },
   mounted() {
-    setTimeout(this.init(), 2000);
+    setTimeout(() => {
+      this.init();
+    }, 500);
   },
   beforeDestroy() {},
   watch: {},

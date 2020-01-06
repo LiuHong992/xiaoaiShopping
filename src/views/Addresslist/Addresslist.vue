@@ -1,6 +1,26 @@
 <template>
   <div>
-   
+    <mytop class="backto">
+      <div slot="left">
+        <van-icon size="20px" name="arrow-left" @click="$goto()" />
+      </div>
+      <div slot="center">地址列表</div>
+    </mytop>
+    <div class="addresslist" v-if="this.addresslist.length>0">
+      <van-address-list
+        v-model="chosenAddressId"
+        :list="addresslist"
+        default-tag-text="默认"
+        @add="onAdd"
+        @edit="onEdit"
+      />
+    </div>
+    <div class="addresslist addressheight" v-else>
+      <p class="pnone">暂无地址数据，快点击下方添加一个地址吧~</p>
+      <div class="addaddress" @click="onAdd">
+        <span>新增地址</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -8,13 +28,55 @@
 export default {
   data() {
     return {
-
+      chosenAddressId: "1",
+      // 接收地址列表的数组
+      addresslist: []
     };
   },
   components: {},
-  methods: {},
+  methods: {
+    // 获取地址列表
+    getAddress() {
+      this.$api
+        .getAddress()
+        .then(res => {
+          if (res.code === 200) {
+            this.addresslist = res.address;
+            this.judgeDefault();
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    // 新增地址
+    onAdd() {
+      this.$router.push("/editaddress");
+    },
+    // 编辑地址
+    onEdit(item) {
+        this.$router.push({name:'editaddress',params:{item:item}})
+    },
+    // 判断默认地址
+    judgeDefault() {
+      let b = 1;
+      let count = 0;
+      this.addresslist.map(item => {
+        if (item.isDefault) {
+          count++, (item.id = "1");
+        } else {
+          b++;
+          item.id = b;
+        }
+      });
+      // 如果没有默认地址，默认数组第一项选中
+      if (count === 0) {
+        this.address[this.address.length - 1].id = "1";
+      }
+    }
+  },
   mounted() {
-
+    this.getAddress();
   },
   watch: {},
   computed: {}
@@ -22,4 +84,36 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.backto {
+  background-color: white;
+  i {
+    font-size: 20px;
+  }
+}
+
+.addresslist {
+  position: relative;
+  .pnone {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .addaddress {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    height: 20px;
+    width: 90%;
+    padding: 8px 0;
+    border-radius: 20px;
+    background-color: #ee0a24;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+.addressheight {
+  height: 90vh;
+}
 </style>

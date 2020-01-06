@@ -129,9 +129,7 @@ export default {
         return service.post('/queryUser')
     },
 
-    saveUser(
-        ...args
-    ) {
+    saveUser({...args }) {
         return service.req('/saveUser', args)
     },
 
@@ -188,7 +186,7 @@ export default {
     postAddress({
         ...args
     }) {
-        return service.req('/address', args)
+        return service.post('/address', args)
     },
 
     deleteAddress({

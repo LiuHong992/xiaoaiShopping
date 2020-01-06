@@ -504,3 +504,43 @@ name: "ENOENTError"
 pid: 8200
 hostname: stu006
 
+2020-01-06 08:32:40,704 ERROR 8528 [-/127.0.0.1/-/38ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827076067410a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827076067410a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157827076067410a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8528
+hostname: stu006
+
+2020-01-06 08:33:06,642 ERROR 8528 [-/127.0.0.1/-/6ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827078663710a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827078663710a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157827078663710a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8528
+hostname: stu006
+
+2020-01-06 08:33:24,723 ERROR 8528 [-/127.0.0.1/-/5ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827080472210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827080472210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157827080472210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8528
+hostname: stu006
+
+2020-01-06 08:33:34,381 ERROR 8528 [-/127.0.0.1/-/6ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827081437910a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157827081437910a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157827081437910a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8528
+hostname: stu006
+

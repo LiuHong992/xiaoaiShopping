@@ -8,7 +8,7 @@
       <img src="../../assets/images/tx.jpg" alt />
     </div>
     <div class="welogin" v-if="users">
-      <p class="welcome">欢迎您：{{users.nickname}}</p>
+      <p class="welcome">欢迎您：{{this.$store.state.user}}</p>
       <p class="loginout" @click="editOut">退出登录</p>
     </div>
     <div class="welogin" v-else>
@@ -35,6 +35,7 @@ export default {
             this.$toast("退出成功");
             this.users = "";
             sessionStorage.setItem("user", this.users);
+            this.$store.state.cartsum = 0;
           }
         })
         .catch(err => {
@@ -52,6 +53,7 @@ export default {
   mounted() {
     if (sessionStorage.getItem("user")) {
       this.users = JSON.parse(sessionStorage.getItem("user"));
+      this.$store.state.user = this.users.nickname;
     }
   },
   watch: {},
@@ -71,6 +73,7 @@ export default {
     top: 10px;
     width: 24px;
     height: 24px;
+
   }
   // 头像
   .portrait {
@@ -88,9 +91,11 @@ export default {
   .welogin {
     position: absolute;
     top: 120px;
-    left: 145px;
+    left: 120px;
+    width: 140px;
     text-align: center;
     color: white;
+    text-align: center;
     .welcome {
       font-size: 19px;
       font-weight: 700;

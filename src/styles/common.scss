@@ -33,3 +33,24 @@
 .van-image-preview__swipe {
     height: 100% !important;
 }
+
+// 地址列表
+.addresslist {
+    .van-radio__icon {
+        font-size: 5.333vw !important;
+    }
+}
+
+// 购物车单选框
+.cartscontent {
+    i {
+        font-size: .8em !important;
+    }
+}
+
+// 编辑地址
+.editaddresses {
+    .van-switch {
+        font-size: 20px !important;
+    }
+}

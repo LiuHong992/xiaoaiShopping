@@ -35,6 +35,11 @@ export default {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid rgb(233, 232, 232);
+  font-size: 14px;
+  i {
+    display: block;
+    margin-top: 10px;
+  }
   // // 返回按钮
   // .leftarrow {
   //   position: fixed;

@@ -7,7 +7,7 @@
       :style="{ height: '100%' ,width:'100%' }"
       :overlay="false"
     >
-      <eject @changes="changes" :userInfo="userInfo"></eject>
+      <eject @changes="changes"></eject>
     </van-popup>
     <!-- 头部组件 -->
     <mytop>
@@ -69,8 +69,6 @@ export default {
     return {
       users: "",
       show: false,
-      // 接收用户信息的对象
-      userInfo: {}
     };
   },
   components: {
@@ -97,22 +95,9 @@ export default {
     changes(data) {
       this.show = data;
     },
-    // 获取用户信息
-    getUser() {
-      this.$api
-        .user()
-        .then(res => {
-          if (res.code === 200) {
-            this.userInfo = res.userInfo;
-          }
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }
+    
   },
   mounted() {
-    this.getUser();
   },
   watch: {},
   computed: {}

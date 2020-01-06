@@ -3,7 +3,7 @@
     <div class="logins">
       <mytop>
         <div class="leftarrow" slot="left" @click="$goto()">
-          <van-icon color="white" class="lefticon" name="arrow-left" />
+          <van-icon color="white" name="arrow-left" />
         </div>
       </mytop>
       <div class="logincontent">
@@ -175,13 +175,13 @@ export default {
   background: url("../../assets/images/login.jpg") no-repeat;
   background-size: cover;
   .leftarrow {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.35);
-    .lefticon {
-      font-size: 20px;
-      margin-top: 10px;
+    i {
+      margin-top: 8px;
       margin-left: 8px;
     }
   }

@@ -26,7 +26,7 @@
       <div class="headleft">
         <span>用户名</span>
       </div>
-      <van-field v-model="userInfo.username" placeholder="请输入用户名" />
+      <van-field v-model="userInfo.username" placeholder="请输入用户名" disabled />
     </div>
     <!-- 昵称 -->
     <div class="nickname username headimg">
@@ -50,19 +50,33 @@
       <div class="headleft">
         <span>邮箱</span>
       </div>
-      <van-field v-model="emails" placeholder="请输入邮箱" />
+      <van-field v-model="userInfo.email" placeholder="请输入邮箱" />
     </div>
     <!-- 出生年月 -->
     <div class="born username headimg">
       <div class="headleft borns">
         <span>出生年月</span>
       </div>
-      <van-field v-model="borns" placeholder="请输入生日" />
+      <div
+        class="bornss"
+        @click="changeFlags"
+      >{{userInfo.year}}年{{userInfo.month}}月{{userInfo.day}}日</div>
+    </div>
+    <div class="datepicker">
+      <van-datetime-picker
+        v-model="currentDate"
+        type="date"
+        :min-date="minDate"
+        :max-date="maxDate"
+        v-if="flags"
+        @cancel="cancels"
+        @confirm="confirms(currentDate)"
+      />
     </div>
     <!-- 保存按钮 -->
     <div class="save buttons" @click="saveUsers">保存</div>
     <!-- 取消按钮 -->
-    <div class="buttons cancel">取消</div>
+    <div class="buttons cancel" @click="changes">取消</div>
   </div>
 </template>
 
@@ -70,47 +84,85 @@
 export default {
   data() {
     return {
+      // 接收用户信息的对象
+      userInfo: {},
       flag: false,
-      emails: "",
+      flags: false,
       // 出生年月
-      borns: ""
+      minDate: new Date(1970, 0, 1),
+      maxDate: new Date(2050, 10, 1),
+      currentDate: ""
     };
   },
-  props: {
-    userInfo: {
-      type: Object,
-      default: () => {}
-    }
-  },
+  props: {},
   components: {},
   methods: {
     // 修改信息弹出层消失
     changes() {
       this.$emit("changes", this.flag);
     },
-    // 用户信息修改
+    // 修改保存用户信息(gender,email,year,month,day,id,nickname,avatar)
     saveUsers() {
-      // this.$parent.userInfo = this.userInfo
+      let obj = {
+        gender: this.userInfo.gender,
+        year: this.userInfo.year,
+        month: this.userInfo.month,
+        day: this.userInfo.day,
+        id: this.userInfo._id,
+        nickname: this.userInfo.nickname.trim(),
+        email: "992049747@qq.com"
+      };
+      if (this.userInfo.nickname.trim() !== "") {
+        this.$api
+          .saveUser(obj)
+          .then(res => {
+            if (res.code === 200) {
+              sessionStorage.setItem("user", JSON.stringify(obj));
+              this.$store.state.user = obj.nickname;
+              this.$toast(res.msg);
+              this.changes();
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      } else {
+        this.$toast("昵称不能为空~");
+      }
+    },
+    // 获取用户信息
+    getUser() {
       this.$api
-        .saveUser(this.$parent.userInfo)
+        .user()
         .then(res => {
           if (res.code === 200) {
-            sessionStorage.setItem(
-              "user",
-              JSON.stringify(this.$parent.userInfo)
+            this.userInfo = res.userInfo;
+            this.currentDate = new Date(
+              this.userInfo.year,
+              this.userInfo.month - 1,
+              this.userInfo.day
             );
-            this.$toast(res.msg);
-            this.changes();
-            console.log(this.$parent.userInfo);
           }
         })
         .catch(err => {
           console.log(err);
         });
-    }
+    },
+    changeFlags() {
+      this.flags = true;
+    },
+    // 时间选择器确认按钮
+    confirms(val) {
+      this.userInfo.year = this.$dayjs(val).format("YYYY");
+      this.userInfo.month = this.$dayjs(val).format("MM");
+      this.userInfo.day = this.$dayjs(val).format("DD");
+      this.flags = false;
+    },
+    // 时间选择器取消按钮
+    cancels() {}
   },
   mounted() {
-    this.borns = `${this.userInfo.year}年${this.userInfo.month}月${this.userInfo.day}日`;
+    this.getUser();
   },
   watch: {},
   computed: {}
@@ -120,9 +172,7 @@ export default {
 <style scoped lang='scss'>
 .backto {
   i {
-    display: block;
     font-size: 20px;
-    line-height: 40px;
   }
 }
 // 头像
@@ -160,6 +210,7 @@ export default {
 // 用户名
 .username {
   height: 40px;
+  font-size: 14px;
   .headleft {
     width: 60px;
     line-height: 44px;
@@ -185,9 +236,21 @@ export default {
 }
 // 出生日期
 .born {
+  justify-content: flex-start;
+  line-height: 44px;
   .borns {
     width: 70px;
   }
+  .bornss {
+    width: 120px;
+  }
+}
+// 时间选择器
+.datepicker {
+  width: 100%;
+  position: absolute;
+  bottom: 8vh;
+  z-index: 99;
 }
 // 按钮公共样式
 .buttons {

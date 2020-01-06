@@ -1,6 +1,11 @@
 <template>
  <div>
-
+   <mytop>
+     <div class="backto" slot="left">
+       <van-icon name="arrow-left" @click="$goto()"/>
+     </div>
+     <div slot="center">订单结算</div>
+   </mytop>
  </div>
 </template>
 
@@ -18,7 +23,7 @@
 
    },
    mounted() {
-
+     console.log(this.$route.params.paylist);
    },
    watch: {
 

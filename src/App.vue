@@ -25,6 +25,9 @@ export default {
 
 <style lang="scss">
 @import "../src/styles/common";
+i {
+  font-size: 20px !important;
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -39,11 +42,10 @@ export default {
 body {
   margin: 0;
   padding: 0;
-
 }
 .fade-enter-active,
 .fade-leave-avtive {
-  transition: opacity 0.5s;
+  transition: opacity 0.7s;
 }
 .fade-enter,
 .fade-leave-to {
