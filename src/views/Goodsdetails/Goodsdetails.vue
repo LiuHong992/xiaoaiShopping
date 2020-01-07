@@ -73,6 +73,50 @@
       <van-goods-action-button type="warning" text="加入购物车" @click="addTocarts" />
       <van-goods-action-button type="danger" text="立即购买" @click="onClickButton" />
     </van-goods-action>
+    <!-- 点击购买弹出框 -->
+    <div class="buypop">
+      <van-popup
+        v-model="show"
+        round
+        closeable
+        close-icon="close"
+        position="bottom"
+        :style="{ height: '35%' }"
+      >
+        <!-- 商品名+商品图片+单价 -->
+        <div class="vpopuptop">
+          <div class="goodsimgs">
+            <img :src="details.image" alt />
+          </div>
+          <div class="goodsdetails">
+            <p>{{details.name}}</p>
+            <p class="pprice">￥{{details.present_price}}</p>
+          </div>
+        </div>
+        <!-- 商品购买提示 -->
+        <div class="vpopupcenter">
+          <div class="vpopleft">
+            <p>购买数量：</p>
+            <div class="pcount">
+              <span class="spamount">剩余{{details.amount}}件</span>
+              <span class="splimit">每人限购5件</span>
+            </div>
+          </div>
+          <div class="vpopright">
+            <van-stepper
+              class="vstepper"
+              v-model="value"
+              integer
+              min="1"
+              max="5"
+              @overlimit="toast"
+            />
+          </div>
+        </div>
+        <!-- 购买按钮 -->
+        <div class="vpopupbottom" @click="onBuyClicked">立即购买</div>
+      </van-popup>
+    </div>
   </div>
 </template>
 
@@ -89,6 +133,11 @@ export default {
       flag: false,
       // 接收轮播图图片数据的数组
       images: [],
+      show: false,
+      // 步进器数据
+      value: 1,
+      // 路由带参跳转传的数组
+      sendgoods: []
     };
   },
   components: {
@@ -175,21 +224,6 @@ export default {
         });
       }
     },
-    // 每次进详情页就对购物车数据进行请求，通过购物车数据数组长度来对购物车按钮
-    // 徽标数字进行动态变化
-    // getCarts() {
-    //   this.$api
-    //     .getCard()
-    //     .then(res => {
-    //       this.lengths = res.shopList.length;
-    //       if (this.lengths === 0) {
-    //         this.lengths = "";
-    //       }
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // },
     // 跳转到购物车页面
     goTocarts() {
       this.$router.push("/carts");
@@ -201,7 +235,7 @@ export default {
           .addShop({ id: this.details.id })
           .then(res => {
             this.$toast(res.msg);
-            this.$store.state.cartsum++
+            this.$store.state.cartsum++;
           })
           .catch(err => {
             console.log(err);
@@ -210,8 +244,26 @@ export default {
         this.$toast("请先登录哦~");
       }
     },
+    // 立即购买
     onClickButton() {
-      this.$toast("点击按钮");
+      this.show = true;
+    },
+    // 立即购买按钮,点击后先清空存在Vuex中的paylist数组，再进行下一步操作
+    onBuyClicked() {
+      this.$store.state.paylist = [];
+      this.details.count = this.value;
+      this.details.mallPrice = this.details.present_price;
+      this.details.cid = this.details.id;
+      this.$store.state.paylist.push(this.details);
+      this.$router.push("/payment");
+    },
+    // 当选择件数超过5件时吐司
+    toast() {
+      if (this.value === 5) {
+        this.$toast("每人限购5件哦~");
+      } else {
+        this.$toast("最少选择1件哦~");
+      }
     },
     onClickIcon() {
       this.$toast("该功能还在开发中哦~");
@@ -219,7 +271,6 @@ export default {
   },
   mounted() {
     this.getDetails();
-    // this.getCarts();
   },
   watch: {},
   computed: {},
@@ -329,5 +380,76 @@ export default {
 .vgoodsaction {
   z-index: 99;
   height: 7.7vh;
+}
+// 购买弹出层
+.buypop {
+  // 商品名+商品图片+单价
+  .vpopuptop {
+    display: flex;
+    height: 90px;
+    padding: 15px 10px 0;
+    border-bottom: 1px solid rgb(199, 198, 198);
+    .goodsimgs {
+      width: 80px;
+      height: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid darkgray;
+      }
+    }
+    .goodsdetails {
+      p {
+        padding: 0 0 0 10px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .pprice {
+        margin-top: 30px;
+        color: crimson;
+      }
+    }
+  }
+  .vpopupcenter {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid rgb(199, 198, 198);
+    .vpopleft {
+      width: 60%;
+      height: 100%;
+      padding: 10px 30px 10px 10px;
+      p {
+        font-size: 14px;
+      }
+      .pcount {
+        display: flex;
+        font-size: 12px;
+        margin-top: 20px;
+        .spamount {
+          color: darkgray;
+        }
+        .splimit {
+          color: crimson;
+          margin-left: 20px;
+        }
+      }
+    }
+    .vpopright {
+      .vstepper {
+        margin-top: 20px;
+      }
+    }
+  }
+  .vpopupbottom {
+    width: 100%;
+    height: 46px;
+    background-color: #ff4444;
+    text-align: center;
+    line-height: 46px;
+    color: white;
+    font-size: 16px;
+  }
 }
 </style>

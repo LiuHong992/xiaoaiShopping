@@ -137,25 +137,26 @@ export default {
         return item.check === true;
       });
       if (this.truelist.length > 0) {
+        let arr = [];
+        this.truelist.map(item => arr.push(item.cid));
+        // console.log(arr);
         this.$dialog
           .confirm({
             title: "删除商品",
             message: "您确认要删除您所选中的商品吗？"
           })
           .then(() => {
-            this.truelist.map(item => {
-              this.$api
-                .deleteShop(item.cid)
-                .then(res => {
-                  if (res.code === 200) {
-                    this.$toast(res.msg);
-                  }
-                })
-                .catch(err => {
-                  console.log(err);
-                });
-            });
-            this.getCarts();
+            this.$api
+              .deleteShop(arr)
+              .then(res => {
+                if (res.code === 200) {
+                  this.$toast(res.msg);
+                  this.getCarts();
+                }
+              })
+              .catch(err => {
+                console.log(err);
+              });
           })
           .catch(() => {});
       } else {
@@ -168,9 +169,10 @@ export default {
         return item.check === true;
       });
       if (this.truelist.length > 0) {
-        this.$router.push({name:"payment",params:{paylist:this.truelist}});
-      }else {
-        this.$toast('请您选择您要购买的商品哟~')
+        this.$router.push("/payment");
+        this.$store.state.paylist = this.truelist;
+      } else {
+        this.$toast("请您选择您要购买的商品哟~");
       }
     }
   },
@@ -196,6 +198,7 @@ export default {
 <style scoped lang='scss'>
 .cartstop {
   height: 8vh;
+  background-color: white;
 }
 // 已登录
 .cartscontent {
@@ -216,6 +219,7 @@ export default {
       width: 35%;
       height: 20px;
       margin: auto 0;
+      font-size: 14px;
     }
     .ctopright {
       padding: 10px 0;

@@ -13,6 +13,7 @@
         default-tag-text="默认"
         @add="onAdd"
         @edit="onEdit"
+        @select="onSelect"
       />
     </div>
     <div class="addresslist addressheight" v-else>
@@ -42,7 +43,13 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.addresslist = res.address;
-            this.judgeDefault();
+            if (this.addresslist.length > 0) {
+              this.judgeDefault();
+            }
+            if ((this.$store.state.selecaddress = {})) {
+              this.$store.state.selecaddress = this.addresslist[0];
+              this.$store.state.addressId = "";
+            }
           }
         })
         .catch(err => {
@@ -55,7 +62,12 @@ export default {
     },
     // 编辑地址
     onEdit(item) {
-        this.$router.push({name:'editaddress',params:{item:item}})
+      this.$router.push({ name: "editaddress", params: { item: item } });
+    },
+    // 选中地址时将其存入Vuex中
+    onSelect(item) {
+      this.$store.state.selecaddress = item;
+      this.$store.state.addressId = item._id;
     },
     // 判断默认地址
     judgeDefault() {
@@ -71,7 +83,7 @@ export default {
       });
       // 如果没有默认地址，默认数组第一项选中
       if (count === 0) {
-        this.address[this.address.length - 1].id = "1";
+        this.addresslist[0].id = "1";
       }
     }
   },
@@ -84,13 +96,6 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.backto {
-  background-color: white;
-  i {
-    font-size: 20px;
-  }
-}
-
 .addresslist {
   position: relative;
   .pnone {

@@ -55,9 +55,7 @@ export default {
     deleteShop(
         id
     ) {
-        return service.req('/deleteShop', {
-            _id: id
-        })
+        return service.post('/deleteShop', id)
     },
 
     // ===============================================================================================================
@@ -129,7 +127,9 @@ export default {
         return service.post('/queryUser')
     },
 
-    saveUser({...args }) {
+    saveUser({
+        ...args
+    }) {
         return service.req('/saveUser', args)
     },
 

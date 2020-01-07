@@ -54,3 +54,22 @@
         font-size: 20px !important;
     }
 }
+
+// 订单结算页面
+.goodslists {
+    .goods {
+        .van-card {
+            &:last-child {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// 我的订单
+.van-tabs--line .van-tabs__wrap {
+    width: 100%;
+    position: sticky;
+    top: 41px;
+    z-index: 99;
+}

@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- 弹出层头部 -->
-    <mytop>
-      <div class="backto" slot="left">
+    <mytop class="backto">
+      <div slot="left">
         <van-icon name="arrow-left" @click="changes" />
       </div>
       <div class="centercont" slot="center">个人资料</div>
@@ -170,11 +170,6 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.backto {
-  i {
-    font-size: 20px;
-  }
-}
 // 头像
 .headimg {
   display: flex;

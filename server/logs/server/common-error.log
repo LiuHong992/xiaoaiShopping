@@ -544,3 +544,532 @@ name: "ENOENTError"
 pid: 8528
 hostname: stu006
 
+2020-01-07 15:29:39,120 ERROR 8240 [-/127.0.0.1/-/20ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,159 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,181 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,187 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,207 ERROR 8240 [-/127.0.0.1/-/0ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,218 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:39,464 ERROR 8240 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:29:55,735 ERROR 8240 [-/127.0.0.1/-/5ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\""
+kind: "string"
+value: {"0":"6694401a30a940f6ae437d541b7fd26d","1":"66074cd2d8464dcc9b2d7fbef5b417d9","2":"4cf7744443f94557b7c6ad37dca9c4db","3":"4ae4e2e2c1df45308be5011a97aae537","4":"418fc60784d04e71beffe1ce5174c947","5":"24afea564e5248b5a2bc59da95f09911","6":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:30:25,574 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\""
+kind: "string"
+value: {"0":"6694401a30a940f6ae437d541b7fd26d","1":"66074cd2d8464dcc9b2d7fbef5b417d9","2":"4cf7744443f94557b7c6ad37dca9c4db","3":"4ae4e2e2c1df45308be5011a97aae537","4":"418fc60784d04e71beffe1ce5174c947","5":"24afea564e5248b5a2bc59da95f09911","6":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 15:30:48,232 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+  '0': '6694401a30a940f6ae437d541b7fd26d',
+  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',
+  '2': '4cf7744443f94557b7c6ad37dca9c4db',
+  '3': '4ae4e2e2c1df45308be5011a97aae537',
+  '4': '418fc60784d04e71beffe1ce5174c947',
+  '5': '24afea564e5248b5a2bc59da95f09911',
+  '6': '238bc2e023844769a6b67d9a4c04b2ea'
+}" at path "cid" for model "ShopList"
+    at new CastError (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (D:\desktop\Shoppingmall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at D:\desktop\Shoppingmall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\""
+kind: "string"
+value: {"0":"6694401a30a940f6ae437d541b7fd26d","1":"66074cd2d8464dcc9b2d7fbef5b417d9","2":"4cf7744443f94557b7c6ad37dca9c4db","3":"4ae4e2e2c1df45308be5011a97aae537","4":"418fc60784d04e71beffe1ce5174c947","5":"24afea564e5248b5a2bc59da95f09911","6":"238bc2e023844769a6b67d9a4c04b2ea"}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{\n  '0': '6694401a30a940f6ae437d541b7fd26d',\n  '1': '66074cd2d8464dcc9b2d7fbef5b417d9',\n  '2': '4cf7744443f94557b7c6ad37dca9c4db',\n  '3': '4ae4e2e2c1df45308be5011a97aae537',\n  '4': '418fc60784d04e71beffe1ce5174c947',\n  '5': '24afea564e5248b5a2bc59da95f09911',\n  '6': '238bc2e023844769a6b67d9a4c04b2ea'\n}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:37:31,963 ERROR 8240 [-/127.0.0.1/-/21ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:38:38,462 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:39:11,801 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:40:39,988 ERROR 8240 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:41:18,891 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:42:41,657 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:43:16,239 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:44:16,033 ERROR 8240 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:46:43,182 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:50:12,334 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+
+2020-01-07 17:57:28,659 ERROR 8240 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8240
+hostname: stu006
+

@@ -46,12 +46,15 @@ export default {
         .catch(err => {
           console.log(err);
         });
-    }
+    },
+    
   },
   mounted() {
-    this.getCarts();
+
     if (!sessionStorage.getItem("user")) {
       this.$store.state.cartsum = 0;
+    } else {
+      this.getCarts();
     }
   },
   watch: {},

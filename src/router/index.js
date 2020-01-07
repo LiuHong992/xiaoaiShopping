@@ -12,9 +12,9 @@ const routes = [
         children: [{
             path: '',
             name: 'homepage',
-            meta: [{
+            meta: {
                 title: '首页'
-            }],
+            },
             component: () =>
                 import ('../views/Homepage/Homepage.vue')
         }]
@@ -26,9 +26,9 @@ const routes = [
         children: [{
             path: '',
             name: 'classfy',
-            meta: [{
+            meta: {
                 title: '分类'
-            }],
+            },
             component: () =>
                 import ('../views/Classfy/Classfy.vue')
         }]
@@ -40,9 +40,9 @@ const routes = [
         children: [{
             path: '',
             name: 'carts',
-            meta: [{
+            meta: {
                 title: '购物车'
-            }],
+            },
             component: () =>
                 import ('../views/Carts/Carts.vue')
         }]
@@ -54,9 +54,9 @@ const routes = [
         children: [{
             path: '',
             name: 'my',
-            meta: [{
+            meta: {
                 title: '我的信息'
-            }],
+            },
             component: () =>
                 import ('../views/My/My.vue')
         }]
@@ -65,9 +65,9 @@ const routes = [
     {
         path: '/city',
         name: 'city',
-        meta: [{
+        meta: {
             title: '城市列表'
-        }],
+        },
         component: () =>
             import ('../views/City/City.vue')
     },
@@ -75,9 +75,9 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        meta: [{
+        meta: {
             title: '登录'
-        }],
+        },
         component: () =>
             import ('../views/Login/Login.vue')
     },
@@ -85,9 +85,9 @@ const routes = [
     {
         path: '/payment',
         name: 'payment',
-        meta: [{
+        meta: {
             title: '订单结算页面'
-        }],
+        },
         component: () =>
             import ('../views/Payment/Payment.vue')
     },
@@ -95,9 +95,9 @@ const routes = [
     {
         path: '/myorder',
         name: 'myorder',
-        meta: [{
+        meta: {
             title: '我的订单'
-        }],
+        },
         component: () =>
             import ('../views/Myorder/Myorder.vue')
     },
@@ -105,9 +105,9 @@ const routes = [
     {
         path: '/evaluationcenter',
         name: 'evaluationcenter',
-        meta: [{
+        meta: {
             title: '评价中心'
-        }],
+        },
         component: () =>
             import ('../views/Evaluationcenter/Evaluationcenter.vue')
     },
@@ -115,9 +115,9 @@ const routes = [
     {
         path: '/postevaluation',
         name: 'postevaluation',
-        meta: [{
+        meta: {
             title: '发布评价'
-        }],
+        },
         component: () =>
             import ('../views/Postevaluation/Postevaluation.vue')
     },
@@ -125,9 +125,9 @@ const routes = [
     {
         path: '/evaluationdetails',
         name: 'evaluationdetails',
-        meta: [{
+        meta: {
             title: '评价详情'
-        }],
+        },
         component: () =>
             import ('../views/Evaluationdetails/Evaluationdetails.vue')
     },
@@ -135,9 +135,9 @@ const routes = [
     {
         path: '/goodsdetails',
         name: 'goodsdetails',
-        meta: [{
+        meta: {
             title: '商品详情页'
-        }],
+        },
         component: () =>
             import ('../views/Goodsdetails/Goodsdetails.vue')
     },
@@ -145,9 +145,9 @@ const routes = [
     {
         path: '/addresslist',
         name: 'addresslist',
-        meta: [{
+        meta: {
             title: '地址列表'
-        }],
+        },
         component: () =>
             import ('../views/Addresslist/Addresslist.vue')
     },
@@ -155,9 +155,9 @@ const routes = [
     {
         path: '/editaddress',
         name: 'editaddress',
-        meta: [{
+        meta: {
             title: '编辑地址'
-        }],
+        },
         component: () =>
             import ('../views/Editaddress/Editaddress.vue')
     },
@@ -165,9 +165,9 @@ const routes = [
     {
         path: '/collection',
         name: 'collection',
-        meta: [{
+        meta: {
             title: '收藏页面'
-        }],
+        },
         component: () =>
             import ('../views/Collection/Collection.vue')
     },
@@ -175,18 +175,18 @@ const routes = [
     {
         path: '/history',
         name: 'history',
-        meta: [{
+        meta: {
             title: '浏览历史'
-        }],
+        },
         component: () =>
             import ('../views/History/History.vue')
     },
     // 错误页面
     {
         path: '*',
-        meta: [{
+        meta: {
             title: '404 Not Found'
-        }],
+        },
         component: () =>
             import ('../views/Error/Error.vue')
     }
@@ -196,6 +196,10 @@ const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes
+})
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    next();
 })
 
 export default router

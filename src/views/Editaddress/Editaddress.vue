@@ -25,7 +25,7 @@ export default {
     return {
       areaList: arealist,
       // 接收修改地址传过来的对象
-      editlist: {},
+      editlist: {}
     };
   },
   components: {},
@@ -47,6 +47,10 @@ export default {
         .postAddress(obj)
         .then(res => {
           if (res.code === 200) {
+            if (val.isDefault) {
+              this.$store.state.selecaddress = obj;
+              this.$store.state.addressId = this.editlist._id;
+            }
             this.$toast(res.msg);
             this.$router.go(-1);
           }
@@ -73,7 +77,9 @@ export default {
     }
   },
   mounted() {
-    this.editlist = this.$route.params.item;
+    if (this.$route.params.item) {
+      this.editlist = this.$route.params.item;
+    }
   },
   watch: {},
   computed: {}
@@ -81,7 +87,4 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-i {
-  font-size: 20px;
-}
 </style>

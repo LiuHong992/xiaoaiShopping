@@ -25,6 +25,12 @@ export default {
 
 <style lang="scss">
 @import "../src/styles/common";
+.backto {
+  background-color: white;
+  i {
+    font-size: 20px;
+  }
+}
 i {
   font-size: 20px !important;
 }

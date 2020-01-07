@@ -7,5 +7,12 @@ export default {
     cartsum: 0,
     citys: '',
     historys: [],
-    serchistorys: []
+    // 搜索历史数组
+    serchistorys: [],
+    //  购物车结算数组
+    paylist: [],
+    // 存从地址列表选中的地址对象
+    selecaddress: {},
+    // 存从地址列表选中的地址的ID
+    addressId: ''
 }

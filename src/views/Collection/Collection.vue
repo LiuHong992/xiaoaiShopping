@@ -30,7 +30,6 @@ export default {
     getCollectlist() {
       this.$api.getCollection().then(res => {
         this.collectlist = res.data.list;
-        // console.log(this.collectlist);
       });
     },
     del(data) {
