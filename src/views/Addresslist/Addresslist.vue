@@ -48,6 +48,8 @@ export default {
             }
             if ((this.$store.state.selecaddress = {})) {
               this.$store.state.selecaddress = this.addresslist[0];
+              // 调整默认地址时需要重新将Vuex中的id赋空，要不然修改默认之后，返回订单结算页面
+              // 地址还是默认选中的是地址列表的第一个
               this.$store.state.addressId = "";
             }
           }
@@ -89,6 +91,7 @@ export default {
   },
   mounted() {
     this.getAddress();
+    console.log(this.$store.state.selecaddress);
   },
   watch: {},
   computed: {}

@@ -66,20 +66,20 @@ export default {
     placeOrder({
         ...args
     }) {
-        return service.req('/order', args)
+        return service.post('/order', args)
     },
 
     // ===============================================================================================================
     /**
      * 商品详情页面(Details)所有接口
-     * goodOne          请求单个商品详情,        参数： id:商品的id,page: 商品评论的页码
+     * goodOne          请求单个商品详情,        参数   ： id:商品的id,page: 商品评论的页码
      * collection       收藏单个商品            参数：  goods:商品的详情信息
      * cancelCollection 取消收藏单个商品        参数：  id:商品的cid
      * isCollection     查询商品是否已收藏      参数：  id:商品的id
      * addShop          加入购物车             参数：  id:商品的id
      */
     goodOne(id, page = 1) {
-        return service.req(`/goods/one?id=${id}&page=${page}`)
+        return service.req(`/goods/one?id=${id}&page=1`)
     },
 
     collection(goods) {
@@ -140,7 +140,7 @@ export default {
     comment({
         ...args
     }) {
-        return service.req('/goodsOne/comment', args)
+        return service.post('/goodsOne/comment', args)
     },
     // ===============================================================================================================
     /**
@@ -238,19 +238,11 @@ export default {
     },
 
     alreadyEvaluated(page = 1) {
-        return service.req('/alreadyEvaluated', {
-            params: {
-                page
-            }
-        })
+        return service.req(`/alreadyEvaluated?page=1`)
     },
 
     tobeEvaluated(page = 1) {
-        return service.req('/tobeEvaluated', {
-            params: {
-                page
-            }
-        })
+        return service.req(`/tobeEvaluated?page=1`)
     },
 
     evaluateOne({

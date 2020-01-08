@@ -37,22 +37,20 @@ export default {
         .then(res => {
           res.shopList.map(item => {
             this.sum += Number(item.count);
-            this.$store.state.cartsum = this.sum;
+            this.$store.state.cartsum = Number(this.sum);
           });
-          if (this.sum === 0) {
-            this.sum = "";
+          if (this.$store.state.cartsum === 0) {
+            this.$store.state.cartsum = "";
           }
         })
         .catch(err => {
           console.log(err);
         });
-    },
-    
+    }
   },
   mounted() {
-
     if (!sessionStorage.getItem("user")) {
-      this.$store.state.cartsum = 0;
+      this.$store.state.cartsum = "";
     } else {
       this.getCarts();
     }

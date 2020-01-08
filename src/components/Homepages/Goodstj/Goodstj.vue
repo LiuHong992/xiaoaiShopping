@@ -35,21 +35,6 @@ export default {
   },
   components: {},
   methods: {
-    // 每次进详情页就对购物车数据进行请求，通过购物车数据数组长度来对购物车按钮
-    // 徽标数字进行动态变化
-    // getCarts() {
-    //   this.$api
-    //     .getCard()
-    //     .then(res => {
-    //       this.count = res.shopList.length;
-    //       if (this.count === 0) {
-    //         this.count = "";
-    //       }
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // },
     // 加入购物车
     addTocarts(item) {
       if (sessionStorage.getItem("user")) {
@@ -67,7 +52,9 @@ export default {
       }
     }
   },
-  mounted() {},
+  mounted() {
+    // console.log(this.goodstj);
+  },
   watch: {},
   computed: {}
 };

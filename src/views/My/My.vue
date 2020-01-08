@@ -95,7 +95,6 @@ export default {
     changes(data) {
       this.show = data;
     },
-    
   },
   mounted() {
   },

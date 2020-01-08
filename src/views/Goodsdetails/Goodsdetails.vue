@@ -55,8 +55,42 @@
             <div class="details" v-else>数据加载中...</div>
           </van-tab>
           <van-tab title="商品评论">
-            <div class="comment ta" v-if="this.goods.comment = []">暂无评论</div>
-            <div class="comment" v-else></div>
+            <div class="comment" v-if="goodevalution.length > 0">
+              <!-- 评价模板 -->
+              <div class="evamodel" v-for="item in goodevalution" :key="item.id">
+                <!-- 评价用户信息 -->
+                <div class="commentinfo">
+                  <!-- 用户头像 -->
+                  <div class="infoimage">
+                    <img :src="item.comment_avatar" alt v-if="item.anonymous"/>
+                    <img src="../../assets/images/tx.jpg" alt="" v-else>
+                  </div>
+                  <!-- 用户名+评分 -->
+                  <div class="namerate">
+                    <!-- 用户名 -->
+                    <div class="name" v-if="item.anonymous">
+                      {{item.comment_nickname}}
+                    </div>
+                    <div class="name" v-else>
+                      {{item.user[0].nickname}}
+                    </div>
+                    <!-- 评分 -->
+                    <div class="rate">
+                      <van-rate v-model="item.rate" readonly color="red"/>
+                    </div>
+                  </div>
+                  <!-- 评价时间 -->
+                  <div class="date">
+                    发布时间：{{item.comment_time}}
+                  </div>
+                </div>
+                <!-- 评价内容 -->
+                <div class="evacontent">
+                  <span>评价内容：{{item.content}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment ta" v-else>暂无评论</div>
           </van-tab>
         </van-tabs>
       </div>
@@ -136,8 +170,8 @@ export default {
       show: false,
       // 步进器数据
       value: 1,
-      // 路由带参跳转传的数组
-      sendgoods: []
+      // 接收查询出来的评价数组
+      goodevalution: []
     };
   },
   components: {
@@ -153,6 +187,8 @@ export default {
             this.goods = res.goods;
             this.details = this.goods.goodsOne;
             this.images.push(this.details.image);
+            this.goodevalution = this.goods.comment;
+            console.log(this.goodevalution);
             this.judge();
           } else {
             this.$toast("请求数据失败");
@@ -370,13 +406,63 @@ export default {
       }
     }
   }
+  // 商品详情/商品评论
   .vgoodstabs {
     margin-bottom: 57px;
     .ta {
       text-align: center;
     }
+    .comment {
+      width: 95%;
+      margin: 0 auto;
+
+      // 评价模板
+      .evamodel {
+        width: 100%;
+        border-bottom: 1px solid darkgrey;
+        // 用户信息
+        .commentinfo {
+          display: flex;
+          width: 100%;
+          height: 60px;
+          // 用户头像
+          .infoimage {
+            width: 40px;
+            height: 40px;
+            margin: 11px 15px 11px 0;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+          // 用户名+评分
+          .namerate{
+            width: 100px;
+            padding-top: 11px;
+            font-size: 14px;
+            .rate{
+              margin-top: 5px;
+            }
+          }
+          // 评价时间
+          .date{
+            padding: 11px;
+            font-size: 12px;
+
+          }
+        }
+        // 评价内容
+        .evacontent{
+          margin-top: 8px;
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
+// 底部商品导航
 .vgoodsaction {
   z-index: 99;
   height: 7.7vh;

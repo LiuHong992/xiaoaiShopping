@@ -45,9 +45,12 @@
     </div>
     <!-- 搜索后展示内容 -->
     <div class="serchs" v-else>
-      <div class="serchcity" v-for="item in cityes" :key="item.id">
-        {{item.name}}
-      </div>
+      <div
+        class="serchcity"
+        v-for="item in cityes"
+        :key="item.id"
+        @click="select(item.name)"
+      >{{item.name}}</div>
     </div>
   </div>
 </template>
@@ -62,7 +65,7 @@ export default {
       city: {},
       value: "",
       // 接收带有A、B、C一类数据的数组
-      cityname: [],
+      cityname: []
     };
   },
   components: {},
@@ -82,15 +85,13 @@ export default {
   },
   mounted() {
     this.getCity();
-    // console.log(this.$store.state.citys);
   },
-  watch: {
-  },
+  watch: {},
   computed: {
     cityes() {
       return this.cityname.filter(item => {
-        return JSON.stringify(item).includes(this.value)
-      })
+        return JSON.stringify(item).includes(this.value);
+      });
     }
   }
 };
@@ -164,10 +165,10 @@ export default {
       }
     }
   }
-  .serchs{
+  .serchs {
     height: 100vh;
     background-color: #ececec;
-    .serchcity{
+    .serchcity {
       width: 100%;
       height: 20px;
       padding: 10px;

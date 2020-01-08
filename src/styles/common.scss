@@ -67,9 +67,52 @@
 }
 
 // 我的订单
-.van-tabs--line .van-tabs__wrap {
-    width: 100%;
-    position: sticky;
-    top: 41px;
-    z-index: 99;
+.vtabs {
+    .van-tabs--line .van-tabs__wrap {
+        width: 100%;
+        position: sticky;
+        top: 41px;
+        z-index: 99;
+    }
+}
+
+// 评价中心
+.van__tabs {
+    .van-tabs {
+        overflow: inherit !important;
+    }
+    .van-tabs__wrap {
+        height: 11.733vw !important;
+        position: absolute !important;
+        width: 330px !important;
+        left: 22px !important;
+        top: -20px !important;
+        z-index: 99 !important;
+        box-shadow: 1px 1px 8px 1px #cdcdcd !important;
+        border-radius: 5px !important;
+    }
+}
+
+// 输入框
+.conts {
+    .van-field__control {
+        height: 200px !important;
+    }
+}
+
+// 匿名评价
+.anonymous {
+    .van-checkbox {
+        height: 35px !important;
+        .van-checkbox__label {
+            margin-top: 3px !important;
+        }
+    }
+}
+
+// 评价详情
+.contents {
+    .van-field__label {
+        width: 19vw !important;
+    }
 }

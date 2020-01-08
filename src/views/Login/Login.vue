@@ -181,8 +181,8 @@ export default {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.35);
     i {
-      margin-top: 8px;
-      margin-left: 8px;
+      margin-top: 4px;
+      margin-left: 4px;
     }
   }
   .logincontent {

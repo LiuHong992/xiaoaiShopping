@@ -1073,3 +1073,502 @@ hostname: stu006
 pid: 8240
 hostname: stu006
 
+2020-01-08 13:53:51,032 ERROR 8424 [-/127.0.0.1/-/15ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 13:54:57,011 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 13:57:38,251 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:00:05,938 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:02:53,325 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:03:01,312 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:14:27,847 ERROR 8424 [-/127.0.0.1/-/4ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:14:30,083 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:18:57,201 ERROR 8424 [-/127.0.0.1/-/31ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846433717610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846433717610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846433717610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:19:03,969 ERROR 8424 [-/127.0.0.1/-/11ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846434396010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846434396010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846434396010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:19:33,373 ERROR 8424 [-/127.0.0.1/-/8ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846437336610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846437336610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846437336610a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:20:04,458 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:20:42,244 ERROR 8424 [-/127.0.0.1/-/5ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846444224010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846444224010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846444224010a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:21:20,567 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846448056210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846448056210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846448056210a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:21:26,527 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846448652310a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+ENOENTError: ENOENT: no such file or directory, open 'D:\desktop\Shoppingmall\server\app\public\avatar\157846448652310a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "D:\\desktop\\Shoppingmall\\server\\app\\public\\avatar\\157846448652310a67h-8_i8c7hfb5e089cfa3eb6752034d59c51.png"
+name: "ENOENTError"
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:28:43,292 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:29:34,474 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:30:07,171 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:37:13,737 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:37:51,676 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:37:58,720 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:40:20,336 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:41:15,068 ERROR 8424 [-/127.0.0.1/-/3ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:41:41,978 ERROR 8424 [-/127.0.0.1/-/1ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:46:18,149 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 14:46:27,682 ERROR 8424 [-/127.0.0.1/-/2ms POST /v1/goodsOne/comment] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.comment (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:247:24)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\desktop\Shoppingmall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:19
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (D:\desktop\Shoppingmall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 8424
+hostname: stu006
+
+2020-01-08 17:24:14,254 ERROR 8424 [-/127.0.0.1/-/17ms POST /v1/addShop] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.addShop (D:\desktop\Shoppingmall\server\app\controller\api\operatingGoods.js:61:38)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async D:\desktop\Shoppingmall\server\app\middleware\isLogin.js:15:13
+    at async D:\desktop\Shoppingmall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (D:\desktop\Shoppingmall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\desktop\Shoppingmall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\desktop\Shoppingmall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\desktop\Shoppingmall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\desktop\Shoppingmall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (D:\desktop\Shoppingmall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async D:\desktop\Shoppingmall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (D:\desktop\Shoppingmall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (D:\desktop\Shoppingmall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8424
+hostname: stu006
+

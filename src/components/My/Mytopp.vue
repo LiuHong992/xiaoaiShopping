@@ -35,7 +35,7 @@ export default {
             this.$toast("退出成功");
             this.users = "";
             sessionStorage.setItem("user", this.users);
-            this.$store.state.cartsum = 0;
+            this.$store.state.cartsum = "";
           }
         })
         .catch(err => {
@@ -73,7 +73,6 @@ export default {
     top: 10px;
     width: 24px;
     height: 24px;
-
   }
   // 头像
   .portrait {

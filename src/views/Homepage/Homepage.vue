@@ -169,18 +169,7 @@ export default {
       this.value = name;
     },
     // 搜索框获取展示数据
-    getShow() {
-      this.$watch(
-        "value",
-        throttle(() => {
-          this.dataArr = [];
-          if (this.value) {
-            this.page = 1;
-            this.search(this.value, false);
-          }
-        }, 800)
-      );
-    }
+    getShow() {}
   },
 
   mounted() {
@@ -215,30 +204,29 @@ export default {
     }
     // 进入首页获取数据
     this.getRecommend();
-    // console.log(this.$store.state.historys);
+    // 函数节流解决搜索框内value值变化过快时请求异常状态
+    this.$watch(
+      "value",
+      this.$utils.throttle(() => {
+        if (this.value === "") {
+          this.serchlist = [];
+        } else {
+          this.$api
+            .search({ value: this.value.trim(), page: 1 })
+            .then(res => {
+              this.serchlist = res.data.list;
+              this.serchlist.map(item => {
+                item.name = this.$utils.keyWord(item.name, this.value.trim());
+              });
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }
+      }, 200)
+    );
   },
   watch: {
-    // value(data) {
-    //   this.$utils.throttle(() => {
-    //     console.log(111);
-    //     if (data !== "") {
-    //       this.$api
-    //         .search({ value: this.value})
-    //         .then(res => {
-    //           this.serchlist = res.data.list;
-    //           this.serchlist.map(item => {
-    //             item.name = this.$utils.keyWord(item.name, this.value);
-    //           });
-    //         })
-    //         .catch(err => {
-    //           console.log(err);
-    //         });
-    //     } else if (data.trim() === "") {
-    //       data.trim() === "";
-    //       this.serchlist = [];
-    //     }
-    //   }, 800);
-    // }
   },
   computed: {},
   beforeRouteLeave(to, from, next) {
@@ -266,7 +254,7 @@ export default {
       font-size: 14px;
       div {
         display: flex;
-        i{
+        i {
           margin-left: 2px;
           margin-top: 14px;
         }
@@ -276,7 +264,7 @@ export default {
         display: inline-block;
         text-indent: 20px;
       }
-      i{
+      i {
         margin-top: 10px !important;
       }
     }

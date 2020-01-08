@@ -45,7 +45,7 @@ i {
   top: 0;
   z-index: 99;
 }
-body {
+body,html,#app {
   margin: 0;
   padding: 0;
 }

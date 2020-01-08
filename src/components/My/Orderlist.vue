@@ -4,7 +4,7 @@
       <van-tabbar-item icon="pending-payment" @click="goTo('')">待付款</van-tabbar-item>
       <van-tabbar-item icon="clock-o" @click="goTo('')">待发货</van-tabbar-item>
       <van-tabbar-item icon="logistics" @click="goTo('')">待收货</van-tabbar-item>
-      <van-tabbar-item icon="records" info="6" @click="goTo('/evaluationcenter')">评价</van-tabbar-item>
+      <van-tabbar-item icon="records" :info="evalutioncount" @click="goTo('/evaluationcenter')">评价</van-tabbar-item>
       <van-tabbar-item icon="passed" @click="goTo('/myorder')">已完成</van-tabbar-item>
     </van-tabbar>
   </div>
@@ -15,11 +15,14 @@ export default {
   data() {
     return {
       users: "",
-      active: ""
+      active: "",
+      // 接收待评价条数
+      evalutioncount: 0
     };
   },
   components: {},
   methods: {
+    // 跳转路由
     goTo(path) {
       if (sessionStorage.getItem("user")) {
         this.users = JSON.parse(sessionStorage.getItem("user"));
@@ -33,9 +36,28 @@ export default {
       } else {
         this.$toast("请先登录哦!");
       }
+    },
+    // 获取待评价数据
+    getOrdercount() {
+      this.$api
+        .tobeEvaluated()
+        .then(res => {
+          if (res.code === 200) {
+            this.evalutioncount = res.data.count;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
-  mounted() {},
+  mounted() {
+    if (sessionStorage.getItem("user")) {
+      this.getOrdercount();
+    } else {
+      this.evalutioncount = "";
+    }
+  },
   watch: {},
   computed: {}
 };

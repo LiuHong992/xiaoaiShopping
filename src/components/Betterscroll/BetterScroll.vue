@@ -16,12 +16,17 @@ export default {
   components: {},
   methods: {
     init() {
-      this.bs = new BScroll(".wrapper", {
-        scrollY: true,
-        click: true,
-        probeType: 3 // listening scroll hook
-      });
-    }
+      if (this.bs) {
+        this.bs.refresh();
+      } else {
+        this.bs = new BScroll(".wrapper", {
+          scrollY: true,
+          click: true,
+          probeType: 3 // listening scroll hook
+          // pullDownRefresh:true++
+        });
+      }
+    },
   },
   mounted() {
     setTimeout(() => {

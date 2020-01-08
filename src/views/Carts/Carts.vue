@@ -152,6 +152,7 @@ export default {
                 if (res.code === 200) {
                   this.$toast(res.msg);
                   this.getCarts();
+                  this.$store.state.cartsum = "";
                 }
               })
               .catch(err => {

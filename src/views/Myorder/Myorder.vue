@@ -107,13 +107,6 @@ export default {
   },
   watch: {},
   computed: {
-    // all() {
-    //   let total = 0;
-    //   this.orderlists = this.orderlists.filter(item => {
-    //     return item.order_list;
-    //   });
-    //   return total;
-    // }
   }
 };
 </script>
@@ -173,12 +166,13 @@ export default {
           }
           // 商品名称
           .goodsname {
-            width: 200px;
+            width: 50vw;
             margin-left: 15px;
             padding-top: 3px;
           }
           // 单价和件数
           .pricount {
+            width: 12vw;
             padding-top: 3px;
             text-align: end;
             .gdscount {
