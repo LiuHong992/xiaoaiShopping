@@ -2,15 +2,10 @@
   <div>
     <!-- <Backtop> -->
     <transition name="fade">
-      <router-view></router-view>
+      <!-- <keep-alive include=""> -->
+        <router-view></router-view>
+      <!-- </keep-alive> -->
     </transition>
-    <!-- <van-overlay class="loading" :show="this.$isLoading">
-      <div class="wrapperss">
-        <div class="block">
-          <van-loading class="vloding" color="#1989fa" />
-        </div>
-      </div>
-    </van-overlay>-->
     <!-- </Backtop> -->
   </div>
 </template>
@@ -45,7 +40,9 @@ i {
   top: 0;
   z-index: 99;
 }
-body,html,#app {
+body,
+html,
+#app {
   margin: 0;
   padding: 0;
 }
@@ -57,28 +54,5 @@ body,html,#app {
 .fade-leave-to {
   opacity: 0;
 }
-.loading {
-  // position: relative;
-  z-index: 999;
-  width: 100vw;
-  height: 100vh;
-  .wrapperss {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
 
-  .block {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background-color: rgba($color: #000000, $alpha: 0.01);
-    .vloding {
-      position: absolute;
-      top: 50px;
-      left: 50px;
-    }
-  }
-}
 </style>

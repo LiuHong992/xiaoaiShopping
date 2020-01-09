@@ -37,7 +37,7 @@ export default {
   methods: {
     // 加入购物车
     addTocarts(item) {
-      if (sessionStorage.getItem("user")) {
+      if (localStorage.getItem("user")) {
         this.$api
           .addShop({ id: item.goodsId })
           .then(res => {
@@ -53,7 +53,6 @@ export default {
     }
   },
   mounted() {
-    // console.log(this.goodstj);
   },
   watch: {},
   computed: {}

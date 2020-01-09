@@ -26,12 +26,17 @@ export default {
           // pullDownRefresh:true++
         });
       }
-    },
+    }
   },
   mounted() {
     setTimeout(() => {
       this.init();
     }, 500);
+  },
+  updated() {
+    setTimeout(() => {
+      this.init();
+    }, 20);
   },
   beforeDestroy() {},
   watch: {},

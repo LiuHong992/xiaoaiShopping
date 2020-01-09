@@ -27,7 +27,7 @@
         <div class="cartsmleft">
           <van-checkbox v-model="item.check" @change="chooseOne"></van-checkbox>
         </div>
-        <div class="cartsmcenter">
+        <div class="cartsmcenter" @click="$goto(item.cid)">
           <img :src="item.image_path" alt />
         </div>
         <div class="cartsmright">
@@ -64,6 +64,7 @@
 
 <script>
 export default {
+  name: "carts",
   data() {
     return {
       // 判断登录状态的数据
@@ -93,9 +94,13 @@ export default {
           if (res.code === 200) {
             this.cartslist = res.shopList;
             this.$store.state.cartsum = 0;
-            this.cartslist.map(item => {
-              this.$store.state.cartsum += Number(item.count);
-            });
+            if (this.cartslist.length === 0) {
+              this.$store.state.cartsum = "";
+            } else {
+              this.cartslist.map(item => {
+                this.$store.state.cartsum += Number(item.count);
+              });
+            }
           }
         })
         .catch(err => {
@@ -172,14 +177,17 @@ export default {
       if (this.truelist.length > 0) {
         this.$router.push("/payment");
         this.$store.state.paylist = this.truelist;
+        this.$store.state.cartsId = 1;
       } else {
         this.$toast("请您选择您要购买的商品哟~");
       }
     }
   },
   mounted() {
-    this.user = sessionStorage.getItem("user");
-    this.getCarts();
+    if (localStorage.getItem("user")) {
+      this.user = localStorage.getItem("user");
+      this.getCarts();
+    }
   },
   watch: {},
   computed: {

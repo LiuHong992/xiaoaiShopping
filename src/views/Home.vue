@@ -1,6 +1,8 @@
 <template>
   <div>
-    <router-view />
+    <keep-alive include="home,my">
+      <router-view />
+    </keep-alive>
     <van-tabbar route v-model="active" @change="clearvx">
       <van-tabbar-item replace to="/" icon="wap-home-o">商城</van-tabbar-item>
       <van-tabbar-item replace to="/classfy" icon="wap-nav">分类</van-tabbar-item>
@@ -49,7 +51,7 @@ export default {
     }
   },
   mounted() {
-    if (!sessionStorage.getItem("user")) {
+    if (!localStorage.getItem("user")) {
       this.$store.state.cartsum = "";
     } else {
       this.getCarts();

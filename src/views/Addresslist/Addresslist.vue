@@ -42,15 +42,17 @@ export default {
         .getAddress()
         .then(res => {
           if (res.code === 200) {
-            this.addresslist = res.address;
+            this.addresslist = res.address.reverse();
             if (this.addresslist.length > 0) {
               this.judgeDefault();
             }
-            if ((this.$store.state.selecaddress = {})) {
+            if ((this.$store.state.selecaddress = {} && this.addresslist.length > 0)) {
               this.$store.state.selecaddress = this.addresslist[0];
               // 调整默认地址时需要重新将Vuex中的id赋空，要不然修改默认之后，返回订单结算页面
               // 地址还是默认选中的是地址列表的第一个
               this.$store.state.addressId = "";
+            }else{
+              this.$store.state.selecaddress = {}
             }
           }
         })
@@ -73,25 +75,22 @@ export default {
     },
     // 判断默认地址
     judgeDefault() {
-      let b = 1;
-      let count = 0;
-      this.addresslist.map(item => {
-        if (item.isDefault) {
-          count++, (item.id = "1");
+      let defaultAddress;
+      // 循环收获地址将默认选项置顶并且选中
+      for (let i = 0; i < this.addresslist.length; i++) {
+        if (this.addresslist[i].isDefault === true) {
+          defaultAddress = this.addresslist[i];
+          defaultAddress.id = "1";
+          this.addresslist.splice(i, 1);
+          this.addresslist.unshift(defaultAddress);
         } else {
-          b++;
-          item.id = b;
+          this.addresslist[i].id = String(i + 2);
         }
-      });
-      // 如果没有默认地址，默认数组第一项选中
-      if (count === 0) {
-        this.addresslist[0].id = "1";
       }
     }
   },
   mounted() {
     this.getAddress();
-    console.log(this.$store.state.selecaddress);
   },
   watch: {},
   computed: {}

@@ -84,8 +84,8 @@ export default {
       this.goodsdetails = item;
     });
     // 获取用户名
-    if (sessionStorage.getItem("user")) {
-      this.user = JSON.parse(sessionStorage.getItem("user"));
+    if (localStorage.getItem("user")) {
+      this.user = JSON.parse(localStorage.getItem("user"));
     }
     // console.log(this.good);
     // console.log(this.goodsdetails);

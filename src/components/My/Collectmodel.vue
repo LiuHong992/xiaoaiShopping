@@ -33,9 +33,6 @@ export default {
     name: {
       type: String,
       default: ""
-    },
-    ids: {
-      // type:
     }
   },
   components: {},
@@ -74,9 +71,16 @@ export default {
           })
           .then(() => {
             this.flag = true;
-            this.$store.state.historys = this.list.filter(desc => {
-              return desc !== item;
+            let Userhistories = JSON.parse(localStorage.getItem("Userhistory"));
+            let userp = JSON.parse(localStorage.getItem("user"));
+            Userhistories.map(item0 => {
+              if (item0.usesnames === userp.nickname) {
+                item0.goods = this.list.filter(desc => {
+                  return desc !== item;
+                });
+              }
             });
+            localStorage.setItem("Userhistory", JSON.stringify(Userhistories));
             this.$emit("del", this.flag);
           })
           .catch(() => {});

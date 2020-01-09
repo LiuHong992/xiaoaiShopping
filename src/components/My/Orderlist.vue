@@ -24,8 +24,8 @@ export default {
   methods: {
     // 跳转路由
     goTo(path) {
-      if (sessionStorage.getItem("user")) {
-        this.users = JSON.parse(sessionStorage.getItem("user"));
+      if (localStorage.getItem("user")) {
+        this.users = JSON.parse(localStorage.getItem("user"));
       }
       if (this.users) {
         if (path !== "") {
@@ -43,7 +43,11 @@ export default {
         .tobeEvaluated()
         .then(res => {
           if (res.code === 200) {
-            this.evalutioncount = res.data.count;
+            if (res.data.count > 0) {
+              this.evalutioncount = res.data.count;
+            } else {
+              this.evalutioncount = "";
+            }
           }
         })
         .catch(err => {
@@ -52,7 +56,7 @@ export default {
     }
   },
   mounted() {
-    if (sessionStorage.getItem("user")) {
+    if (localStorage.getItem("user")) {
       this.getOrdercount();
     } else {
       this.evalutioncount = "";

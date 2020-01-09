@@ -57,6 +57,7 @@
         <van-icon name="arrow" />
       </div>
     </div>
+    <loading></loading>
   </div>
 </template>
 
@@ -65,10 +66,11 @@ import myinfo from "../../components/My/Mytopp";
 import orderlist from "../../components/My/Orderlist";
 import eject from "../../components/My/Eject";
 export default {
+  name: "my",
   data() {
     return {
       users: "",
-      show: false,
+      show: false
     };
   },
   components: {
@@ -79,8 +81,8 @@ export default {
   methods: {
     // 导航栏跳转
     goTorouter(path) {
-      if (sessionStorage.getItem("user")) {
-        this.users = JSON.parse(sessionStorage.getItem("user"));
+      if (localStorage.getItem("user")) {
+        this.users = JSON.parse(localStorage.getItem("user"));
       }
       if (this.users) {
         this.$router.push(path);
@@ -94,10 +96,9 @@ export default {
     },
     changes(data) {
       this.show = data;
-    },
+    }
   },
-  mounted() {
-  },
+  mounted() {},
   watch: {},
   computed: {}
 };

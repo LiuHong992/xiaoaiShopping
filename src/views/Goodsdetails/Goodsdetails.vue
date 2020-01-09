@@ -62,27 +62,21 @@
                 <div class="commentinfo">
                   <!-- 用户头像 -->
                   <div class="infoimage">
-                    <img :src="item.comment_avatar" alt v-if="item.anonymous"/>
-                    <img src="../../assets/images/tx.jpg" alt="" v-else>
+                    <img :src="item.comment_avatar" alt v-if="item.anonymous" />
+                    <img src="../../assets/images/tx.jpg" alt v-else />
                   </div>
                   <!-- 用户名+评分 -->
                   <div class="namerate">
                     <!-- 用户名 -->
-                    <div class="name" v-if="item.anonymous">
-                      {{item.comment_nickname}}
-                    </div>
-                    <div class="name" v-else>
-                      {{item.user[0].nickname}}
-                    </div>
+                    <div class="name" v-if="item.anonymous">{{item.comment_nickname}}</div>
+                    <div class="name" v-else>{{item.user[0].nickname}}</div>
                     <!-- 评分 -->
                     <div class="rate">
-                      <van-rate v-model="item.rate" readonly color="red"/>
+                      <van-rate v-model="item.rate" readonly color="red" />
                     </div>
                   </div>
                   <!-- 评价时间 -->
-                  <div class="date">
-                    发布时间：{{item.comment_time}}
-                  </div>
+                  <div class="date">发布时间：{{item.comment_time}}</div>
                 </div>
                 <!-- 评价内容 -->
                 <div class="evacontent">
@@ -188,7 +182,6 @@ export default {
             this.details = this.goods.goodsOne;
             this.images.push(this.details.image);
             this.goodevalution = this.goods.comment;
-            console.log(this.goodevalution);
             this.judge();
           } else {
             this.$toast("请求数据失败");
@@ -266,7 +259,7 @@ export default {
     },
     // 加入购物车
     addTocarts() {
-      if (sessionStorage.getItem("user")) {
+      if (localStorage.getItem("user")) {
         this.$api
           .addShop({ id: this.details.id })
           .then(res => {
@@ -310,11 +303,22 @@ export default {
   },
   watch: {},
   computed: {},
-  // 跳转详情页路由前将详情页的信息存入Vuex中和sessionStorage中
+  // 跳转详情页路由前将详情页的信息存入Vuex中和localStorage中
+  // 历史浏览记录
   beforeRouteLeave(to, from, next) {
-    if (!this.$store.state.historys.some(item => item.id === this.details.id)) {
-      this.$store.state.historys.push(this.details);
-      sessionStorage.setItem("historyy", JSON.stringify(this.details));
+    if (JSON.parse(localStorage.getItem("user"))) {
+      let Userhistories = JSON.parse(localStorage.getItem("Userhistory"));
+      let userp = JSON.parse(localStorage.getItem("user"));
+      Userhistories.map(item => {
+        if (item.usesnames === userp.nickname) {
+          if (!item.goods.some(item0 => item0.id === this.details.id)) {
+            item.goods.push(this.details);
+          }
+        }
+      });
+      localStorage.setItem("Userhistory", JSON.stringify(Userhistories));
+    } else {
+      console.log("你没有登录~");
     }
     next();
   }
@@ -437,23 +441,22 @@ export default {
             }
           }
           // 用户名+评分
-          .namerate{
+          .namerate {
             width: 100px;
             padding-top: 11px;
             font-size: 14px;
-            .rate{
+            .rate {
               margin-top: 5px;
             }
           }
           // 评价时间
-          .date{
+          .date {
             padding: 11px;
             font-size: 12px;
-
           }
         }
         // 评价内容
-        .evacontent{
+        .evacontent {
           margin-top: 8px;
           margin-bottom: 10px;
           font-size: 13px;

@@ -19,7 +19,6 @@ const bs = new BScroll('.div')
 Vue.use(Vant);
 Vue.prototype.$api = Api
 Vue.prototype.$axios = service
-Vue.prototype.$isLoading = false
 Vue.prototype.$dayjs = dayjs
 Vue.config.productionTip = false
 Vue.prototype.$utils = utils

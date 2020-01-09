@@ -1,11 +1,9 @@
 // 封装axios请求
 import axios from 'axios'
 import qs from 'qs'
-// import { Loading } from 'element-ui'
-import {
-    Loading
-} from 'vant';
+import state from '../store/state'
 import Vue from 'vue'
+import store from '../store'
 
 let loding = null
     // let loading = null
@@ -28,7 +26,7 @@ service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencod
 
 // 请求拦截器
 service.interceptors.request.use(config => {
-    Vue.prototype.$isLoading = true
+    store.state.loading = true
 
     // loading = Loading.service({
     //     text: '正在加载中......'
@@ -47,9 +45,12 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(response => {
-    if (Vue.prototype.$isLoading) {
-        Vue.prototype.$isLoading = false
-    }
+
+    setTimeout(() => {
+        store.state.loading = false
+    }, 800)
+
+
     // if (loading) {
     //     loading.close()
     // }

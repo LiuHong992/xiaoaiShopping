@@ -11,10 +11,10 @@
       <img src="../../assets/images/evaluate.jpg" alt />
     </div>
     <!-- 评价标签页 -->
-    <van-tabs class="van__tabs">
-      <van-tab title="待评价">
+    <van-tabs class="van__tabs" v-model="active">
+      <van-tab title="待评价" name="1">
         <div class="waitevalutions" v-if="orderevalution.length>0">
-          <better class="wrapper">
+          <better v-if="active==='1'" class="wrapper">
             <!-- 待评价模板 -->
             <div class="waitmodel" v-for="item in orderevalution" :key="item.id">
               <!-- 待评价商品图片 -->
@@ -38,9 +38,9 @@
           <div class="nones">暂无商品需要评价哟~</div>
         </div>
       </van-tab>
-      <van-tab title="已评价">
+      <van-tab title="已评价" name="2">
         <div class="waitevalutions" v-if="doneevalution.length>0">
-          <better class="wrapper">
+          <better v-if="active==='2'" class="wrapper">
             <!-- 已评价模板 -->
             <div class="waitmodel" v-for="item in doneevalution" :key="item.id">
               <!-- 已评价商品图片 -->
@@ -70,8 +70,10 @@
 
 <script>
 export default {
+  name: "evalutioncenter",
   data() {
     return {
+      active: "1",
       // 接收待评价的数组
       orderevalution: [],
       // 接收已评价的数组
@@ -82,7 +84,7 @@ export default {
   },
   components: {},
   methods: {
-    // 获取订单信息
+    // 获取待评价的数组
     getOrder() {
       this.$api
         .tobeEvaluated()

@@ -166,8 +166,10 @@ export default {
     }
   }
   .serchs {
-    height: 100vh;
+    width: 94%;
+    height: 100%;
     background-color: #ececec;
+    font-size: 14px;
     .serchcity {
       width: 100%;
       height: 20px;

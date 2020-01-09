@@ -63,8 +63,7 @@ export default {
       orderlist: [],
       // 接收订单数组中的id的数组
       orderid: [],
-      // 计算购物车内总件数
-      counts: "",
+      // 判断是立即购买还是购物车购买,空字符串代表购物车购买，true为立即购买
       flag: "",
       // 总件数
       countss: 0
@@ -109,23 +108,32 @@ export default {
           message: "您是否确认购买这些商品呢？"
         })
         .then(() => {
-          this.$api
-            .placeOrder(obj)
-            .then(res => {
-              if (res.code === 200) {
-                this.$toast(res.msg);
-                this.$router.go(-1);
-              }
-            })
-            .catch(err => {
-              console.log(err);
-            });
+          // 此处的判断为如果有地址（address）再进行调接口操作
+          if (this.addressdefault.address) {
+            this.$api
+              .placeOrder(obj)
+              .then(res => {
+                if (res.code === 200) {
+                  this.$store.state.cartsId = 0;
+                  this.$toast(res.msg);
+                  this.$router.go(-1);
+                }
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          } else {
+            this.$toast("请选择收货地址哟~");
+          }
         })
         .catch(() => {});
     }
   },
   mounted() {
-    if (this.$store.state.paylist.length === 1) {
+    if (
+      this.$store.state.paylist.length === 1 &&
+      this.$store.state.cartsId !== 1
+    ) {
       this.orderlist = this.$store.state.paylist;
       this.flag = true;
     } else {

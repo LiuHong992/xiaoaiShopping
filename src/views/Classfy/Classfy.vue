@@ -49,11 +49,13 @@
         </better>
       </div>
     </div>
+    <loading></loading>
   </div>
 </template>
 
 <script>
 export default {
+  name: "classfy",
   data() {
     return {
       activeKey: 0,

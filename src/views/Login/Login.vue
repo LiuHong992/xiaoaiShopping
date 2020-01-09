@@ -118,7 +118,8 @@ export default {
           if (res.code === 200) {
             this.$toast(res.msg);
             this.$router.go(-1);
-            sessionStorage.setItem("user", JSON.stringify(res.userInfo));
+            localStorage.setItem("user", JSON.stringify(res.userInfo));
+            this.addHistory(res);
             this.changeCaptcha();
           } else if (res.code === -1) {
             this.$toast(res.msg);
@@ -143,7 +144,7 @@ export default {
           if (res.code === 200) {
             this.$toast(res.msg);
             this.$router.go(-1);
-            sessionStorage.setItem("user", JSON.stringify(res.userInfo));
+            localStorage.setItem("user", JSON.stringify(res.userInfo));
             this.changeCaptcha();
           } else if (res.code === -1) {
             this.$toast(res.msg);
@@ -158,6 +159,29 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    // 创建用户历史信息
+    addHistory(res) {
+      if (JSON.parse(localStorage.getItem("Userhistory"))) {
+        let Userhistories = JSON.parse(localStorage.getItem("Userhistory"));
+        let flag = Userhistories.every(item => {
+          return item.usesnames !== res.userInfo.nickname;
+        });
+        if (flag) {
+          Userhistories.push({
+            usesnames: res.userInfo.nickname,
+            goods: []
+          });
+          localStorage.setItem("Userhistory", JSON.stringify(Userhistories));
+        }
+      } else {
+        let Userhistories = [];
+        Userhistories.push({
+          usesnames: res.userInfo.nickname,
+          goods: []
+        });
+        localStorage.setItem("Userhistory", JSON.stringify(Userhistories));
+      }
     }
   },
   mounted() {

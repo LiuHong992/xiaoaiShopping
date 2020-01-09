@@ -16,6 +16,7 @@
         <span v-if="show" @click="changeShows">取消</span>
       </div>
     </mytop>
+    <!-- 搜索框弹出层 -->
     <div class="pop">
       <van-popup
         :overlay="false"
@@ -78,6 +79,7 @@
         <Hotgoods :hotgoods="list.hotGoods"></Hotgoods>
       </better>
     </van-pull-refresh>
+    <loading></loading>
   </div>
 </template>
 
@@ -88,6 +90,7 @@ import Goodstj from "../../components/Homepages/Goodstj/Goodstj";
 import Foodsmodel from "../../components/Homepages/Leisuregoods/Leisuregoods";
 import Hotgoods from "../../components/Homepages/Hotgoods/Hotgoods";
 export default {
+  name: "home",
   data() {
     return {
       count: 0,
@@ -126,6 +129,7 @@ export default {
       setTimeout(() => {
         this.isLoading = false;
         this.count++;
+        // this.getRecommend();
       }, 500);
     },
     onSearch() {},
@@ -173,35 +177,38 @@ export default {
   },
 
   mounted() {
-    // 获取定位
-    let _this = this;
-    // console.log(_this.$store.state.citys);
-    var map = new AMap.Map("container", {
-      resizeEnable: true
-    });
-    AMap.plugin("AMap.Geolocation", function() {
-      var geolocation = new AMap.Geolocation({
-        enableHighAccuracy: true, //是否使用高精度定位，默认:true
-        timeout: 10000, //超过10秒后停止定位，默认：5s
-        buttonPosition: "RB", //定位按钮的停靠位置
-        buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-        zoomToAccuracy: true //定位成功后是否自动调整地图视野到定位点
+    if (this.$store.state.citys === "") {
+      // 获取定位
+      let _this = this;
+      // console.log(_this.$store.state.citys);
+      var map = new AMap.Map("container", {
+        resizeEnable: true
       });
-      map.addControl(geolocation);
-      geolocation.getCurrentPosition();
-      AMap.event.addListener(geolocation, "complete", onComplete);
-      AMap.event.addListener(geolocation, "err", onError);
-    });
-    //解析定位结果
-    function onComplete(data) {
-      _this.$store.state.citys = data.addressComponent.city;
+      AMap.plugin("AMap.Geolocation", function() {
+        var geolocation = new AMap.Geolocation({
+          enableHighAccuracy: true, //是否使用高精度定位，默认:true
+          timeout: 10000, //超过10秒后停止定位，默认：5s
+          buttonPosition: "RB", //定位按钮的停靠位置
+          buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+          zoomToAccuracy: true //定位成功后是否自动调整地图视野到定位点
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, "complete", onComplete);
+        AMap.event.addListener(geolocation, "err", onError);
+      });
+      //解析定位结果
+      function onComplete(data) {
+        _this.$store.state.citys = data.addressComponent.city;
+      }
+      //解析定位错误信息
+      function onError(data) {
+        document.getElementById("status").innerHTML = "定位失败";
+        document.getElementById("result").innerHTML =
+          "失败原因排查信息:" + data.message;
+      }
     }
-    //解析定位错误信息
-    function onError(data) {
-      document.getElementById("status").innerHTML = "定位失败";
-      document.getElementById("result").innerHTML =
-        "失败原因排查信息:" + data.message;
-    }
+
     // 进入首页获取数据
     this.getRecommend();
     // 函数节流解决搜索框内value值变化过快时请求异常状态
@@ -226,8 +233,7 @@ export default {
       }, 200)
     );
   },
-  watch: {
-  },
+  watch: {},
   computed: {},
   beforeRouteLeave(to, from, next) {
     if (
@@ -235,7 +241,7 @@ export default {
       this.value !== ""
     ) {
       this.$store.state.serchistorys.push(this.value);
-      // sessionStorage.setItem("historyy", JSON.stringify(this.value));
+      
     }
     next();
   }
@@ -248,6 +254,7 @@ export default {
   background-color: #ececec;
   .hometop {
     height: 7.8vh;
+    z-index: 1000 !important;
     .citys {
       height: 100%;
       display: flex;

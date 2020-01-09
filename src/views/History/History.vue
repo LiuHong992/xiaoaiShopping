@@ -8,13 +8,7 @@
       <div class="collect" slot="center">历史记录</div>
     </mytop>
     <!-- 历史记录 -->
-    <collectmodel
-      :list="this.histories"
-      :ids="this.histories.id"
-      name="记录"
-      @del="del"
-      v-if="this.histories"
-    ></collectmodel>
+    <collectmodel :list="this.histories" name="记录" @del="del" v-if="this.histories"></collectmodel>
   </div>
 </template>
 
@@ -23,7 +17,7 @@ import collectmodel from "../../components/My/Collectmodel";
 export default {
   data() {
     return {
-      histories: [],
+      histories: []
     };
   },
   components: {
@@ -33,15 +27,26 @@ export default {
     // 子组件分发的事件
     del(data) {
       if (data) {
-        this.histories = this.$store.state.historys;
+        let Userhistories = JSON.parse(localStorage.getItem("Userhistory"));
+        let userp = JSON.parse(localStorage.getItem("user"));
+        Userhistories.map(item => {
+          if (item.usesnames === userp.nickname) {
+            this.histories = item.goods;
+          }
+        });
       }
     }
   },
   mounted() {
-    this.$store.state.historys.map(item => {
-      this.histories.push(item);
+    let Userhistories = JSON.parse(localStorage.getItem("Userhistory"));
+    let userp = JSON.parse(localStorage.getItem("user"));
+    Userhistories.map(item => {
+      if (item.usesnames === userp.nickname) {
+        item.goods.map(item0 => {
+          this.histories.push(item0);
+        });
+      }
     });
-    // this.histories.push(JSON.parse(sessionStorage.getItem("historyy")));
   },
   watch: {},
   computed: {}

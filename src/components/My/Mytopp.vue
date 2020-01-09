@@ -34,7 +34,7 @@ export default {
           if (res.code === 0) {
             this.$toast("退出成功");
             this.users = "";
-            sessionStorage.setItem("user", this.users);
+            localStorage.setItem("user", this.users);
             this.$store.state.cartsum = "";
           }
         })
@@ -51,8 +51,8 @@ export default {
     }
   },
   mounted() {
-    if (sessionStorage.getItem("user")) {
-      this.users = JSON.parse(sessionStorage.getItem("user"));
+    if (localStorage.getItem("user")) {
+      this.users = JSON.parse(localStorage.getItem("user"));
       this.$store.state.user = this.users.nickname;
     }
   },

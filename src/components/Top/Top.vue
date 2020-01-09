@@ -40,21 +40,5 @@ export default {
     display: block;
     margin-top: 10px;
   }
-  // // 返回按钮
-  // .leftarrow {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 100;
-  //   width: 40px;
-  //   height: 40px;
-  //   border-radius: 50%;
-  //   background-color: rgba(0, 0, 0, 0.35);
-  //   .lefticon {
-  //     font-size: 20px;
-  //     margin-top: 10px;
-  //     margin-left: 8px;
-  //   }
-  // }
 }
 </style>

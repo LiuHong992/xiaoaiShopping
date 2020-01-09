@@ -87,6 +87,7 @@ export default {
       // 接收用户信息的对象
       userInfo: {},
       flag: false,
+      // 时间选择器的控制
       flags: false,
       // 出生年月
       minDate: new Date(1970, 0, 1),
@@ -117,7 +118,7 @@ export default {
           .saveUser(obj)
           .then(res => {
             if (res.code === 200) {
-              sessionStorage.setItem("user", JSON.stringify(obj));
+              localStorage.setItem("user", JSON.stringify(obj));
               this.$store.state.user = obj.nickname;
               this.$toast(res.msg);
               this.changes();
@@ -159,7 +160,9 @@ export default {
       this.flags = false;
     },
     // 时间选择器取消按钮
-    cancels() {}
+    cancels() {
+      this.flags = false;
+    }
   },
   mounted() {
     this.getUser();
@@ -212,8 +215,6 @@ export default {
   }
 }
 // 昵称
-.nickname {
-}
 // 性别
 .sex {
   display: flex;
@@ -227,8 +228,6 @@ export default {
   }
 }
 // 邮箱
-.email {
-}
 // 出生日期
 .born {
   justify-content: flex-start;
