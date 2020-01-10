@@ -11,7 +11,6 @@ Vue.component('loading', Loading)
 
 
 Vue.prototype.$goto = function(item, index = 1) {
-    // console.log(item);
     if (item) {
         this.$router.push({
             name: "goodsdetails",

@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- 头部 -->
-    <mytop>
-      <div class="back" slot="left">
+    <mytop class="backto">
+      <div slot="left">
         <van-icon @click="$goto()" size="20px" name="arrow-left" />
       </div>
       <div class="collect" slot="center">历史记录</div>

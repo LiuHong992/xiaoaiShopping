@@ -12,7 +12,7 @@
       </van-tab>
       <van-tab title="已完成">
         <!-- 订单内容层 -->
-        <div class="content">
+        <div class="content" v-if="orderlists.length>0">
           <!-- 订单模板 -->
           <div class="ordermodel" v-for="item in orderlists" :key="item.id">
             <!-- 订单编号 -->
@@ -46,6 +46,9 @@
               <div class="totalprice">共{{item.count}}件商品 合计：￥{{item.mallPrice.toFixed(2)}}</div>
             </div>
           </div>
+        </div>
+        <div v-else>
+          <p class="pnone">暂无订单信息</p>
         </div>
       </van-tab>
     </van-tabs>
@@ -87,7 +90,6 @@ export default {
         .then(res => {
           if (res.code === 200) {
             this.orderlists = res.list;
-            // console.log(this.orderlists);
             this.orderlists.map(item => {
               this.totalcount = 0;
               item.order_list.map(item0 => {
@@ -106,8 +108,7 @@ export default {
     this.getOrder();
   },
   watch: {},
-  computed: {
-  }
+  computed: {}
 };
 </script>
 

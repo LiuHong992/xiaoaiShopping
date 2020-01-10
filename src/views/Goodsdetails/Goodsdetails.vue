@@ -279,12 +279,16 @@ export default {
     },
     // 立即购买按钮,点击后先清空存在Vuex中的paylist数组，再进行下一步操作
     onBuyClicked() {
-      this.$store.state.paylist = [];
-      this.details.count = this.value;
-      this.details.mallPrice = this.details.present_price;
-      this.details.cid = this.details.id;
-      this.$store.state.paylist.push(this.details);
-      this.$router.push("/payment");
+      if (localStorage.getItem("user")) {
+        this.$store.state.paylist = [];
+        this.details.count = this.value;
+        this.details.mallPrice = this.details.present_price;
+        this.details.cid = this.details.id;
+        this.$store.state.paylist.push(this.details);
+        this.$router.push("/payment");
+      } else {
+        this.$toast("请先登录哟~");
+      }
     },
     // 当选择件数超过5件时吐司
     toast() {

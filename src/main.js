@@ -2,8 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-chalk/index.css'
 import dayjs from 'dayjs'
 import service from "./http"
 import Vant from 'vant';
@@ -14,7 +12,6 @@ import Api from './http/Api'
 import utils from './assets/js/util'
 
 
-// Vue.use(ElementUI)
 const bs = new BScroll('.div')
 Vue.use(Vant);
 Vue.prototype.$api = Api

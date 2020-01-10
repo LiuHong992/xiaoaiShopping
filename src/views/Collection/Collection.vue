@@ -1,8 +1,8 @@
 <template>
   <div class="collec">
     <!-- 头部 -->
-    <mytop>
-      <div class="back" slot="left">
+    <mytop class="backto">
+      <div slot="left">
         <van-icon @click="$goto()" size="20px" name="arrow-left" />
       </div>
       <div class="collect" slot="center">我的收藏</div>
